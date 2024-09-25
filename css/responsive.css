@@ -1,0 +1,202 @@
+@media (max-width: 1120px) {}
+
+@media (max-width: 992px) {
+    .hero_area {
+        height: auto;
+    }
+
+    .custom_nav-container .nav_search-btn {
+        background-position: center;
+        margin-top: 10px;
+    }
+
+    .slider_section {
+        padding-top: 70px;
+        padding-bottom: 75px;
+        height: 500px;
+    }
+
+    .info_items {
+        width: 100%;
+    }
+
+
+
+    .tabel_harga {
+        width: 90%;
+    }
+
+    .karyawan {
+        width: 80%;
+    }
+
+    .footer .row_footer {
+        flex-direction: column;
+    }
+
+    .footer .isi_footer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .detail-box {
+        margin-top: 70px;
+    }
+
+    .carousel img {
+        width: calc(100% / 2);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact_section .form_container {
+        padding: 45px 0;
+    }
+
+    .info_items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact_section .heading_container {
+        justify-content: center;
+    }
+
+    .contact_section .heading_container h2::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact_section button {
+        margin: 45px auto 0 auto;
+    }
+
+    .informasi {
+        width: 90%;
+    }
+
+    .karyawan {
+        width: 80%;
+    }
+
+    .footer .row_footer {
+        flex-direction: column;
+    }
+
+    .footer .isi_footer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .detail-box {
+        margin-top: 70px;
+    }
+
+    .wrapper {
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .slider_section .detail-box h1 {
+        font-size: 3rem;
+    }
+
+    .detail-box {
+        margin-top: 70px;
+    }
+
+    .cardd {
+        margin-bottom: 10px;
+    }
+
+    .navbar {
+        background-color: #000000;
+    }
+
+
+    .tabel_harga {
+        width: 90%;
+
+    }
+
+    .pricing-card {
+        margin-bottom: 50px;
+    }
+
+    .karyawan {
+        width: 80%;
+    }
+
+    .footer .row_footer {
+        flex-direction: column;
+    }
+
+    .footer .isi_footer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+
+
+}
+
+@media (max-width: 480px) {}
+
+@media (max-width: 420px) {
+    .slider_section .detail-box h1 {
+        letter-spacing: .3rem;
+    }
+
+    .informasi {
+        width: 90%;
+    }
+
+    .tabel_harga {
+        width: 90%;
+    }
+
+    .karyawan {
+        width: 80%;
+    }
+
+    .footer .row_footer {
+        flex-direction: column;
+    }
+
+    .footer .isi_footer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .detail-box {
+        margin-top: 70px;
+    }
+}
+
+@media (max-width: 360px) {}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+
+    .informasi {
+        width: 90%;
+    }
+
+    .tabel_harga {
+        width: 90%;
+    }
+
+    .karyawan {
+        width: 80%;
+    }
+
+    .detail-box {
+        margin-top: 70px;
+    }
+}
