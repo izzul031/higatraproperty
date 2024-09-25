@@ -1,0 +1,220 @@
+<html>
+
+<head>
+    <title>
+        Sign Up
+    </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            display: flex;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .image-section {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-section .create-account {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .image-section .create-account a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .form-section {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .form-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .form-section .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        .form-section .input-group input {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-section .input-group i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ccc;
+        }
+
+        .form-section .input-group input::placeholder {
+            color: #ccc;
+        }
+
+        .form-section .remember-me {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .form-section .remember-me input {
+            margin-right: 10px;
+        }
+
+        .form-section .remember-me label {
+            font-size: 14px;
+        }
+
+        .form-section .login-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .form-section .social-login {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .form-section .social-login span {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-section .social-login a {
+            margin: 0 5px;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .form-section .social-login a.facebook {
+            background-color: #3b5998;
+        }
+
+        .form-section .social-login a.twitter {
+            background-color: #1da1f2;
+        }
+
+        .form-section .social-login a.google {
+            background-color: #db4437;
+        }
+
+        .back-home {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img alt="Illustration of a person sitting on a chair with a laptop, next to a plant" height="400"
+                src="images/Tablet login-amico (1).png" width="400" />
+            <div class="create-account">
+                <a href="registrasi.html">
+                    Create an account
+                </a>
+            </div>
+        </div>
+        <div class="form-section">
+            <a class="back-home" href="index.php">
+                <i class="fas fa-home">
+                </i>
+            </a>
+            <h2>
+                SIGN IN
+            </h2>
+            <!-- <div class="input-group">
+                <i class="fas fa-user">
+                </i>
+                <input placeholder="Your Name" type="text" />
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock">
+                </i>
+                <input placeholder="Password" type="password" />
+            </div> -->
+            <form action="login.php" method="post">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input placeholder="Nama Anda" type="text" name="username" />
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input placeholder="Kata Sandi" type="password" name="password" />
+                </div>
+                <button class="login-btn" type="submit">
+                    Masuk
+                </button>
+            </form>
+            <div class="remember-me">
+                <input id="remember" type="checkbox" />
+                <label for="remember">
+                    Remember me
+                </label>
+            </div>
+            <div class="social-login">
+                <span>
+                    Or login with
+                </span>
+                <a class="google" href="#">
+                    <i class="fab fa-google">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer section -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
