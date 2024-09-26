@@ -6,14 +6,3 @@
     background: #eee;
 
 }
-
-.background-container {
-    height: 100vh; /* Mengisi tinggi viewport */
-    background: linear-gradient(to right, #feb47b, #fff); /* Gradient dari kiri ke kanan */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
