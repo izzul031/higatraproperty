@@ -6,3 +6,10 @@
     background: #eee;
 
 }
+
+body {
+    background-image: url('../higatra/background/LOGIN.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
