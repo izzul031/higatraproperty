@@ -9,7 +9,7 @@
 
 .background-container {
     height: 100vh; /* Mengisi tinggi viewport */
-    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient dari kiri ke kanan */
+    background: linear-gradient(to right, #feb47b, #fff); /* Gradient dari kiri ke kanan */
     display: flex;
     flex-direction: column;
     justify-content: center;
