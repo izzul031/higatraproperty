@@ -312,7 +312,7 @@
             <h1>Hasil Jadi</h1>
             <?php while ($row = mysqli_fetch_assoc($hasil_jadi)): ?>
                 <div class="card">
-                    <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/<?= $row['gambar']; ?>" width="300" />
+                    <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/hasil_jadi/<?= $row['gambar']; ?>" width="300" />
                     <div class="card-description">
                         <?= $row['deskripsi']; ?>
                     </div>

@@ -344,7 +344,7 @@
             <h1>Progres</h1>
             <?php while ($row = mysqli_fetch_assoc($progres)): ?>
                 <div class="card">
-                    <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/<?= $row['gambar']; ?>" width="300" />
+                    <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/progres/<?= $row['gambar']; ?>" width="300" />
                     <div class="card-description">
                         <?= $row['deskripsi']; ?>
                     </div>
