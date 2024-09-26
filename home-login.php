@@ -25,7 +25,7 @@
               <p class="text-center h8 fw-bold mb-4 mx-1 mx-md-3 mt-3">WELCOME TO </p>
 
               <!-- logo -->
-              <img src="../higatra/images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" clas="img-fluid mb-4" style="display: block; margin:auto; margin-bottom:5px;">
+              <img src="../higatra/images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" clas="img-fluid mb-4" style="display: block; margin-left: 100px; margin-right: 100px; margin-bottom:50px;">
               <!-- Email input -->
               <div class="form-outline mb-4">
                 <!-- <label class="form-label" for="form1Example13"> <i class="bi bi-person-circle"></i> Username</label> -->
@@ -52,7 +52,7 @@
 
               <!-- Submit button -->
               <!-- <button type="submit" class="btn btn-primary btn-lg">Login in</button> -->
-              <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+              <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4" style="width: 400px; height:100%">
                 <input type="submit" value="LOGIN" name="login" class="btn btn-warning btn-block btn-lg text-light my-2 py-3 " style="width:100% ; border-radius: 12px; font-weight:600;" />
               </div>
 
