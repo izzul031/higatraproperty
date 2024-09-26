@@ -129,7 +129,7 @@
 
         .section {
             padding: 20px 0;
-            background-color: #B69957;
+            background-color: #000;
         }
 
         .container-3 {
@@ -201,7 +201,7 @@
             <p style="text-align: justify; color:#fff">
                 <b style="color: #AA8D3F;">Higatra Property</b> adalah perusahaan kontruksi yang didirikan pada <b style="color: #AA8D3F;">>tahun 2017</b> oleh <b style="color: #AA8D3F;">Eko
                     Heri Supriyanto.</b> Berawal dari keresahan, Higatra hadir di Masyarakat dengan <b style="color: #AA8D3F;">harga bangun
-                    menyesuaikan dan Komitmen produk inovasi dengan Garansi resmi 1 Tahun.</b>
+                    menyesuaikan dengan Komitmen produk inovasi dengan Garansi resmi 1 Tahun.</b>
             </p>
             <p style="text-align: justify; color:#fff">
                 Mewujudkan Rumah Impian merupakan suatu kebanggan bagi kami dengan <b style="color: #AA8D3F;">mengatur tata letak, pencahayaan,
@@ -216,25 +216,25 @@
     </div>
     <div class="section">
         <div class="container-3">
-            <h2 class="text-center">
+            <h2 class="text-center" style="color: #AA8D3F;">
                 Visi
             </h2>
             <p class="text-justify">
-                Menjadi perusahaan konstruksi yang <b>mengedepankan kualitas dan jaminan produk terbaik di
+                Menjadi perusahaan konstruksi yang <b style="color: #AA8D3F;">mengedepankan kualitas dan jaminan produk terbaik di
                     Indonesia.</b> memberikan kontribusi positif bagi klien yang membutuhkan jasa bangun
-                <b>BERGARANSI</b> di Indonesia.
+                <b style="color: #AA8D3F;">BERGARANSI</b> di Indonesia. 
             </p>
         </div>
     </div>
     <div class="section">
         <div class="container-3">
-            <h2 class="text-center">
+            <h2 class="text-center" style="color: #AA8D3F;">
                 Misi
             </h2>
             <p class="text-justify">
-                Berusaha mengembangkan <b>produk pelayanan terbaik dan memberikan inovasi kreatif pada jasa kontruksi
+                Berusaha mengembangkan <b style="color: #AA8D3F;">produk pelayanan terbaik dan memberikan inovasi kreatif pada jasa kontruksi
                     serta</b> memberikan kontribusi positif bagi masyarakat tentang jasa bangun dan renovasi
-                <b>BERGARANSI</b> di Indonesia.
+                <b style="color: #AA8D3F;">BERGARANSI</b> di Indonesia.
             </p>
         </div>
     </div>
@@ -537,7 +537,7 @@
 
             </div>
 
-            <a href="https://wa.me/62887729791118?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
+            <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
                 <i class="fab fa-whatsapp" style="margin-right: 10px;"></i>
                 HUBUNGI KAMI!
             </a>
