@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Sep 2024 pada 03.57
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.0.30
+-- Generation Time: Sep 27, 2024 at 10:38 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `us_section2`
+-- Table structure for table `us_section2`
 --
 
 CREATE TABLE `us_section2` (
@@ -35,10 +35,10 @@ CREATE TABLE `us_section2` (
   `nomor_whatsapp` varchar(20) DEFAULT NULL,
   `pesan_otomatis` varchar(255) DEFAULT NULL,
   `service_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `us_section2`
+-- Dumping data for table `us_section2`
 --
 
 INSERT INTO `us_section2` (`id`, `type`, `harga`, `fasilitas`, `nomor_whatsapp`, `pesan_otomatis`, `service_id`) VALUES
@@ -55,28 +55,28 @@ INSERT INTO `us_section2` (`id`, `type`, `harga`, `fasilitas`, `nomor_whatsapp`,
 --
 
 --
--- Indeks untuk tabel `us_section2`
+-- Indexes for table `us_section2`
 --
 ALTER TABLE `us_section2`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_us_section2_services` (`service_id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `us_section2`
+-- AUTO_INCREMENT for table `us_section2`
 --
 ALTER TABLE `us_section2`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `us_section2`
+-- Constraints for table `us_section2`
 --
 ALTER TABLE `us_section2`
   ADD CONSTRAINT `fk_us_section2_services` FOREIGN KEY (`service_id`) REFERENCES `services` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;

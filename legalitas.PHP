@@ -361,38 +361,16 @@
     </h2>
     <div class="row">
     <div class="column">
-        <img src="higatra/wedding.jpg">
-        <img src="rocks.jpg">
-        <img src="falls2.jpg">
-        <img src="paris.jpg">
-        <img src="nature.jpg">
-        <img src="mist.jpg">
-        <img src="paris.jpg">
+        <img src="../higatra/images/Legalitas/potret1.jpg">
+        <img src="../higatra/images/Legalitas/potret2.jpg">
+        <img src="../higatra/images/Legalitas/potret3.jpg">
+
     </div>
     <div class="column">
-        <img src="underwater.jpg">
-        <img src="ocean.jpg">
-        <img src="wedding.jpg">
-        <img src="mountainskies.jpg">
-        <img src="rocks.jpg">
-        <img src="underwater.jpg">
-    </div>
-    <div class="column">
-        <img src="wedding.jpg">
-        <img src="rocks.jpg">
-        <img src="falls2.jpg">
-        <img src="paris.jpg">
-        <img src="nature.jpg">
-        <img src="mist.jpg">
-        <img src="paris.jpg">
-    </div>
-    <div class="column">
-        <img src="underwater.jpg">
-        <img src="ocean.jpg">
-        <img src="wedding.jpg">
-        <img src="mountainskies.jpg">
-        <img src="rocks.jpg">
-        <img src="underwater.jpg">
+        <img src="../higatra/images/Legalitas/Picture13.jpg">
+        <img src="../higatra/images/Legalitas/Picture23.jpg">
+        <img src="../higatra/images/Legalitas/Picture33.jpg">
+        <img src="../higatra/images/Legalitas/Picture43.jpg">
     </div>
     </div>
 
