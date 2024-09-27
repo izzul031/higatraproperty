@@ -23,91 +23,6 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
 
-    <!-- <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            background-color: white;
-            padding: 10px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar img {
-            height: 50px;
-            margin-right: 10px;
-        }
-
-        .navbar h1 {
-            font-size: 24px;
-            margin: 0;
-            margin-right: auto;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: black;
-            margin: 0 15px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .navbar a:hover {
-            color: gray;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            border-radius: 5px;
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 8px 20px;
-            text-decoration: none;
-            display: block;
-            border-radius: 0;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown a i {
-            transition: transform 0, 3s ease;
-        }
-
-        .dropdown a i.rotate {
-            transform: rotate(180deg);
-        }
-
-        .dropdown:hover .dropbtn {
-            color: gray;
-        }
-
-        .header-image {
-            width: 100%;
-            height: auto;
-        }
-    </style> -->
 </head>
 
 <body>
@@ -301,6 +216,60 @@
                     margin: 5px;
                 }
             }
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                display: block;
+                margin: auto;
+                max-width: 80%;
+                max-height: 80%;
+            }
+
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 35px;
+                color: white;
+                font-size: 40px;
+                font-weight: bold;
+            }
+
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 40px;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .prev {
+                left: 0;
+            }
+
+            .next {
+                right: 0;
+            }
+
+            .prev:hover, .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
         </style>
     </head>
 
@@ -308,37 +277,65 @@
         <?php
         include 'kon/koneksi.php';
         $gambar_3d = mysqli_query($conn, "SELECT * FROM gambar_3d");
+        $images = [];
+        while ($row = mysqli_fetch_assoc($gambar_3d)) {
+            $images[] = $row;
+        }
         ?>
 
         <div class="container" style="margin-top: 100px;">
             <h1>Gambar 3D</h1>
-            <?php while ($row = mysqli_fetch_assoc($gambar_3d)): ?>
+            <?php foreach ($images as $index => $row): ?>
                 <div class="card">
-                    <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/gambar_3d/<?= $row['gambar']; ?>" width="300" />
+                    <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/gambar_3d/<?= $row['gambar']; ?>" width="300" data-index="<?= $index ?>" />
                     <div class="card-description">
                         <?= $row['deskripsi']; ?>
                     </div>
                 </div>
-            <?php endwhile; ?>
+            <?php endforeach; ?>
         </div>
+
         <div class="modal" id="myModal">
             <span class="close" id="closeModal">&times;</span>
             <img class="modal-content" id="img01" />
+            <a class="prev" id="prevSlide">&#10094;</a>
+            <a class="next" id="nextSlide">&#10095;</a>
         </div>
+
         <script>
             var modal = document.getElementById("myModal");
             var modalImg = document.getElementById("img01");
             var closeModal = document.getElementById("closeModal");
+            var prevSlide = document.getElementById("prevSlide");
+            var nextSlide = document.getElementById("nextSlide");
+
+            var images = <?= json_encode($images); ?>;
+            var currentIndex = 0;
 
             document.querySelectorAll('.card img').forEach(img => {
                 img.onclick = function() {
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
+                    currentIndex = parseInt(this.getAttribute('data-index'));
+                    openModal(currentIndex);
                 }
             });
 
             closeModal.onclick = function() {
                 modal.style.display = "none";
+            }
+
+            prevSlide.onclick = function() {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+                openModal(currentIndex);
+            }
+
+            nextSlide.onclick = function() {
+                currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+                openModal(currentIndex);
+            }
+
+            function openModal(index) {
+                modal.style.display = "block";
+                modalImg.src = "images/gambar_3d/" + images[index].gambar;
             }
         </script>
 
