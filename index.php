@@ -50,7 +50,7 @@
               <div class="detail-box">
                 <div class="detail-text">
                   <h4>
-                    <b style="text-shadow: -2px 0px 0px white;">Selamat Datang di HFH</b>
+                    <b style="text-shadow: -2px 0px 0px white;">Selamat Datang di</b>
                   </h4>
                   <h1>
                     <b style="text-shadow: -4px 0px 0px white;">HIGATRA PROPERTY</b>
