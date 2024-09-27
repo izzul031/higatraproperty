@@ -230,9 +230,8 @@
             }
 
             .modal-content {
-                display: inline-block;
+                display: block;
                 margin: auto;
-                justify-content: center;
                 max-width: 70%;
                 max-height: 100%;
             }
@@ -337,6 +336,13 @@
             function openModal(index) {
                 modal.style.display = "block";
                 modalImg.src = "images/gambar_3d/" + images[index].gambar;
+            }
+
+            // Tambahkan event listener untuk close modal ketika area di luar gambar diklik
+            modal.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
             }
         </script>
 
