@@ -159,15 +159,15 @@
                 display: none;
                 position: fixed;
                 z-index: 1;
-                padding-top: 60px;
+                padding-top: 10px;
                 left: 0;
                 top: 0;
-                width: 100%;
-                height: 100%;
+                /* width: 100%;
+                height: 100%; */
                 overflow: auto;
                 background-color: rgb(0, 0, 0);
                 background-color: rgba(0, 0, 0, 0.9);
-                margin-top: 100px;
+                margin-top: auto;
             }
 
             .modal-content {
@@ -230,10 +230,11 @@
             }
 
             .modal-content {
-                display: block;
+                display: inline-block;
                 margin: auto;
-                max-width: 80%;
-                max-height: 80%;
+                justify-content: center;
+                max-width: 70%;
+                max-height: 100%;
             }
 
             .close {
