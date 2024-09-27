@@ -35,33 +35,21 @@
 <body>
   <?php include "layout/navbar.html"; ?>
   <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
+    <div class="hero-slideshow"></div>
+    <section class="slider_section position-relative">
       <div class="container">
         <div class="col-lg-10 col-md-11 mx-auto">
           <div class="detail-box">
             <div class="detail-text">
-              <!-- <h4>
-                <b style="text-shadow: -2px 0px 0px white;">Selamat Datang di</b>
-              </h4>
-              <h1>
-                <b style="text-shadow: -4px 0px 0px white;">HIGATRA PROPERTY</b>
-              </h1>
-              <h3>
-                <b style="text-shadow: -2px 0px 0px white;">AHLINYA BANGUN BERGARANSI</b>
-              </h3> -->
+              <!-- Your existing content here -->
             </div>
           </div>
         </div>
       </div>
+    </section>
   </div>
-  </section>
+
+
   <!-- end slider section -->
 
   <!-- about -->
@@ -524,10 +512,26 @@
     </div>
   </section>
 
-  <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
+  <!-- <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
     <i class="fab fa-whatsapp" style="margin-right: 10px;"></i>
     HUBUNGI KAMI!
-  </a>
+  </a> -->
+  <div class="social-media-float">
+    <a href="https://wa.me/123456?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.instagram.com/username" target="_blank" class="instagram-float">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/username" target="_blank" class="facebook-float">
+      <i class="fab fa-facebook"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/username" target="_blank" class="youtube-float">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+
+
 
   <!-- end partner -->
   <footer>
@@ -577,9 +581,9 @@
   <!-- footer section -->
 
   <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/carousel.js"></script>
-
   <script src="js/index.js"></script>
 
 </body>

@@ -247,6 +247,37 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+.hero-slideshow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  animation: slideshow 30s infinite;
+}
+
+@keyframes slideshow {
+
+  0%,
+  100% {
+    background-image: url(../images/sampul.png);
+  }
+
+  33.33% {
+    background-image: url(../images/sampul2.png);
+  }
+
+  66.66% {
+    background-image: url(../images/sampul3.jpg);
+  }
+}
+
+.slider_section {
+  position: relative;
+  z-index: 1;
+}
 
 .sub_page .hero_area {
   height: auto;
@@ -1219,7 +1250,7 @@ a:focus {
   /* Warna indikator aktif */
 }
 
-.whatsapp-float {
+/* .whatsapp-float {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -1238,6 +1269,60 @@ a:focus {
   margin-right: 10px;
 }
 
+*/ .social-media-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: row;
+  /* Tetap horizontal */
+  gap: 10px;
+  /* Jarak antar ikon */
+  z-index: 1000;
+}
+
+.whatsapp-float,
+.instagram-float,
+.facebook-float,
+.youtube-float {
+  background-color: #25d366;
+  /* Default warna hijau WhatsApp */
+  color: #ffffff;
+  width: 50px;
+  /* Ukuran kotak */
+  height: 50px;
+  /* Ukuran kotak */
+  border-radius: 50%;
+  /* Membuat bentuk lingkaran */
+  display: flex;
+  justify-content: center;
+  /* Posisikan ikon di tengah secara horizontal */
+  align-items: center;
+  /* Posisikan ikon di tengah secara vertikal */
+  font-size: 24px;
+  /* Ukuran ikon */
+  cursor: pointer;
+}
+
+.whatsapp-float {
+  background-color: #25d366;
+  /* Warna untuk WhatsApp */
+}
+
+.instagram-float {
+  background-color: #E1306C;
+  /* Warna untuk Instagram */
+}
+
+.facebook-float {
+  background-color: #3b5998;
+  /* Warna untuk Facebook */
+}
+
+.youtube-float {
+  background-color: #FF0000;
+  /* Warna untuk YouTube */
+}
 .service-icon {
   background-color: #AA8D3F;
   width: 80px;
