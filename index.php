@@ -47,7 +47,7 @@
         <div class="col-lg-10 col-md-11 mx-auto">
           <div class="detail-box">
             <div class="detail-text">
-              <h4>
+              <!-- <h4>
                 <b style="text-shadow: -2px 0px 0px white;">Selamat Datang di</b>
               </h4>
               <h1>
@@ -55,7 +55,7 @@
               </h1>
               <h3>
                 <b style="text-shadow: -2px 0px 0px white;">AHLINYA BANGUN BERGARANSI</b>
-              </h3>
+              </h3> -->
             </div>
           </div>
         </div>

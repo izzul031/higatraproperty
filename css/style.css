@@ -538,13 +538,7 @@ a:focus {
   /* Tambahkan transisi untuk border-width */
 }
 
-.pricing-card:hover {
-  border-color: #000000;
-  /* Ubah warna border saat dihover */
-  border-width: 2px;
-  /* Ubah ketebalan border saat dihover */
-  
-  }
+
 
 .pricing-card h4 .badge {
   display: inline-block;
@@ -1253,6 +1247,7 @@ a:focus {
   justify-content: center;
   align-items: center;
   margin: 0 auto 15px;
+    box-shadow: 3px 5px 0px #E5D2A1;
 }
 
 .service-icon img {
