@@ -43,7 +43,7 @@ include "../layout/header-admin.php";
                 </div>
                 <div class="mb-3">
                     <label for="link" class="form-label">Link Layanan</label>
-                    <input type="text" name="link" class="form-control" required>
+                    <input type="text" name="link" class="form-control">
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
             </form>
