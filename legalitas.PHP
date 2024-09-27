@@ -344,14 +344,6 @@
         </style>
     </head>
 
-    <!-- <body>
-        <div class="container-2"> -->
-    <!-- <div class="section-2"> -->
-    <h2 class="text-center" style="color:#b59a3b; margin-top: 20px">
-        LEGALITAS
-    </h2>
-    </div>
-    </div>
     <?php
     include 'kon/koneksi.php';
 
@@ -364,30 +356,46 @@
     ?>
 
     <div class="section-2" style="background-color: #000;">
-        <div class="container-2" style="background-color: #000; padding: 10px;">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="report">
-                        <div class="nav-arrows">
-                            <i class="fas fa-arrow-left nav-left" onclick="changeImage('lppd', -1)"></i>
-                            <i class="fas fa-arrow-right nav-right" onclick="changeImage('lppd', 1)"></i>
-                        </div>
-                        <img alt="Cover of LPPD report with government emblem and text" height="400" id="lppd" src="images/reports/<?= $lppd_result[0]['image_url']; ?>" width="300" />
-                        <div class="report-title" id="lppd-title"><?= $lppd_result[0]['title']; ?></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="report-2" , style="margin: 30px; margin-top:50px;">
-                        <div class="nav-arrows" , style="margin:0px">
-                            <i class="fas fa-arrow-left nav-left" onclick="changeImage('lkpd', -1)"></i>
-                            <i class="fas fa-arrow-right nav-right" onclick="changeImage('lkpd', 1)"></i>
-                        </div>
-                        <img alt="Cover of LKPD report with government emblem and text" height="400" id="lkpd" src="images/reports/<?= $lkpd_result[0]['image_url']; ?>" width="300" />
-                        <div class="report-title" id="lkpd-title"><?= $lkpd_result[0]['title']; ?></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <h2 class="text-center" style="color:#b59a3b; margin-top: 20px; font-family: 'Poppins', sans-serif;">
+        LEGALITAS
+    </h2>
+    <div class="row">
+    <div class="column">
+        <img src="higatra/wedding.jpg">
+        <img src="rocks.jpg">
+        <img src="falls2.jpg">
+        <img src="paris.jpg">
+        <img src="nature.jpg">
+        <img src="mist.jpg">
+        <img src="paris.jpg">
+    </div>
+    <div class="column">
+        <img src="underwater.jpg">
+        <img src="ocean.jpg">
+        <img src="wedding.jpg">
+        <img src="mountainskies.jpg">
+        <img src="rocks.jpg">
+        <img src="underwater.jpg">
+    </div>
+    <div class="column">
+        <img src="wedding.jpg">
+        <img src="rocks.jpg">
+        <img src="falls2.jpg">
+        <img src="paris.jpg">
+        <img src="nature.jpg">
+        <img src="mist.jpg">
+        <img src="paris.jpg">
+    </div>
+    <div class="column">
+        <img src="underwater.jpg">
+        <img src="ocean.jpg">
+        <img src="wedding.jpg">
+        <img src="mountainskies.jpg">
+        <img src="rocks.jpg">
+        <img src="underwater.jpg">
+    </div>
+    </div>
+
     </div>
 
     <script>
