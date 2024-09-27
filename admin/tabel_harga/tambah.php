@@ -1,28 +1,35 @@
-<script>
-    function addFasilitasField() {
-        var container = document.getElementById("fasilitasContainer");
-        var input = document.createElement("input");
-        input.type = "text";
-        input.name = "fasilitas[]";
-        input.placeholder = "Masukkan fasilitas";
-        input.classList.add("form-control", "mb-2"); // Menambahkan class Bootstrap
-        container.appendChild(input);
-    }
+<?php
+include '../../kon/koneksi.php';
 
-    function removeFasilitasField() {
-        var container = document.getElementById("fasilitasContainer");
-        if (container.children.length > 1) {
-            container.removeChild(container.lastChild);
-        }
+// Hardcode the service_id for "jasa bangun"
+$jasa_bangun_id = 1;
+
+// Simpan ke database setelah submit
+if (isset($_POST['submit'])) {
+    $type = $_POST['type'];
+    $harga = $_POST['harga'];
+    $fasilitas = $_POST['fasilitas'];
+    $fasilitasStr = implode(',', $fasilitas);
+    $nomor_whatsapp = $_POST['nomor_whatsapp'];
+    $pesan_otomatis = $_POST['pesan_otomatis'];
+
+    $sql = "INSERT INTO us_section2 (type, harga, fasilitas, nomor_whatsapp, pesan_otomatis, service_id) 
+            VALUES ('$type', '$harga', '$fasilitasStr', '$nomor_whatsapp', '$pesan_otomatis', $jasa_bangun_id)";
+
+    if (mysqli_query($conn, $sql)) {
+        header('Location: index.php');
+    } else {
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
-</script>
+}
+?>
 
 <?php include "../layout/header-admin.php"; ?>
 
 <div class="container mt-5">
     <div class="card">
         <div class="card-header text-center">
-            <h5>Tambah Type</h5>
+            <h5>Tambah Type Jasa Bangun</h5>
         </div>
         <div class="card-body">
             <form method="post" action="tambah.php">
@@ -63,26 +70,21 @@
 
 <?php include "../layout/footer-admin.php"; ?>
 
-
-<?php
-// Simpan ke database setelah submit
-if (isset($_POST['submit'])) {
-    include '../../kon/koneksi.php';
-
-    $type = $_POST['type'];
-    $harga = $_POST['harga'];
-    $fasilitas = $_POST['fasilitas'];  // Mengambil array fasilitas
-    $fasilitasStr = implode(',', $fasilitas);  // Menggabungkan menjadi string dengan pemisah koma
-    $nomor_whatsapp = $_POST['nomor_whatsapp'];
-    $pesan_otomatis = $_POST['pesan_otomatis'];
-
-    $sql = "INSERT INTO us_section2 (type, harga, fasilitas, nomor_whatsapp, pesan_otomatis) 
-            VALUES ('$type', '$harga', '$fasilitasStr', '$nomor_whatsapp', '$pesan_otomatis')";
-
-    if (mysqli_query($conn, $sql)) {
-        header('Location: index.php');
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+<script>
+    function addFasilitasField() {
+        var container = document.getElementById("fasilitasContainer");
+        var input = document.createElement("input");
+        input.type = "text";
+        input.name = "fasilitas[]";
+        input.placeholder = "Masukkan fasilitas";
+        input.classList.add("form-control", "mb-2");
+        container.appendChild(input);
     }
-}
-?>
+
+    function removeFasilitasField() {
+        var container = document.getElementById("fasilitasContainer");
+        if (container.children.length > 1) {
+            container.removeChild(container.lastChild);
+        }
+    }
+</script>

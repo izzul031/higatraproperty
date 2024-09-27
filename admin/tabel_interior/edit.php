@@ -2,15 +2,13 @@
 include '../../kon/koneksi.php';
 
 $id = $_GET['id'];
-$row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM us_section2 WHERE id = $id"));
-
-// Hardcode the service_id for "jasa bangun"
-$jasa_bangun_id = 1;
+$row = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM tb_interior WHERE id = $id"));
 
 // Memisahkan fasilitas dari string menjadi array
 $fasilitas = explode(',', $row['fasilitas']);
 
 if (isset($_POST['submit'])) {
+    $category = $_POST['category'];
     $type = $_POST['type'];
     $harga = $_POST['harga'];
     $fasilitas = $_POST['fasilitas'];
@@ -18,12 +16,13 @@ if (isset($_POST['submit'])) {
     $nomor_whatsapp = $_POST['nomor_whatsapp'];
     $pesan_otomatis = $_POST['pesan_otomatis'];
 
-    $sql = "UPDATE us_section2 SET type = '$type', harga = '$harga', fasilitas = '$fasilitasStr', 
-            nomor_whatsapp = '$nomor_whatsapp', pesan_otomatis = '$pesan_otomatis', service_id = $jasa_bangun_id 
-            WHERE id = $id";
+    $sql = "UPDATE tb_interior SET category = '$category', type = '$type', harga = '$harga', fasilitas = '$fasilitasStr', 
+            nomor_whatsapp = '$nomor_whatsapp', pesan_otomatis = '$pesan_otomatis' 
+            WHERE id = $id"; // Menghapus koma setelah pesan_otomatis
 
     if (mysqli_query($conn, $sql)) {
         header('Location: index.php');
+        exit(); // Pastikan untuk menghentikan eksekusi setelah redirect
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
@@ -39,6 +38,15 @@ if (isset($_POST['submit'])) {
         </div>
         <div class="card-body">
             <form method="post">
+                <div class="mb-3">
+                    <label for="category" class="form-label">Kategori:</label>
+                    <select name="category" class="form-control" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="Interior" <?= $row['category'] == 'Interior' ? 'selected' : ''; ?>>Interior</option>
+                        <option value="Eksterior" <?= $row['category'] == 'Eksterior' ? 'selected' : ''; ?>>Eksterior</option>
+                    </select>
+                </div>
+
                 <div class="mb-3">
                     <label for="type" class="form-label">Type:</label>
                     <input type="text" name="type" class="form-control" value="<?= $row['type']; ?>" required>

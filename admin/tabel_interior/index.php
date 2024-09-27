@@ -1,27 +1,25 @@
 <?php
 include '../../kon/koneksi.php';
 
-// Assuming 'jasa bangun' has a specific service_id, let's say it's 1
-$jasa_bangun_id = 1;
-
-$query = "SELECT us.* 
-          FROM us_section2 us 
-          WHERE us.service_id = $jasa_bangun_id
-          ORDER BY us.id";
+// Query untuk mengambil data dari tb_interior
+$query = "SELECT * FROM tb_interior us ORDER BY id";
 $result = mysqli_query($conn, $query);
 
+// Proses penghapusan data
 if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
-    mysqli_query($conn, "DELETE FROM us_section2 WHERE id = $id AND service_id = $jasa_bangun_id");
+    mysqli_query($conn, "DELETE FROM tb_interior WHERE id = $id");
     header('Location: index.php');
+    exit();  // Pastikan untuk menghentikan eksekusi setelah redirect
 }
 
 ?>
 
+
 <?php include "../layout/header-admin.php"; ?>
 <div class="card m-4">
     <div class="card-header text-center">
-        <h5>Tabel Harga Jasa Bangun</h5>
+        <h5>Tabel Harga Eksterior dan Interior</h5>
     </div>
     <div class="card-body">
         <a href="tambah.php" class="btn btn-primary btn-sm mb-2"><i class="fa-solid fa-plus"></i> Tambah Data</a>
@@ -30,6 +28,7 @@ if (isset($_GET['delete'])) {
                 <thead class="table-dark align-middle">
                     <tr>
                         <th>No</th>
+                        <th>Kategori</th>
                         <th>Type</th>
                         <th>Harga</th>
                         <th>Fasilitas</th>
@@ -44,13 +43,14 @@ if (isset($_GET['delete'])) {
                     while ($row = mysqli_fetch_assoc($result)) : ?>
                         <tr class="align-middle">
                             <td><?= $no++; ?></td>
+                            <td><?= $row['category']; ?></td>
                             <td><?= $row['type']; ?></td>
                             <td><?= $row['harga']; ?></td>
                             <td><?= $row['fasilitas']; ?></td>
                             <td><?= $row['nomor_whatsapp']; ?></td>
                             <td><?= $row['pesan_otomatis']; ?></td>
                             <td>
-                                <a href="edit.php?id=<?= $row['id']; ?>" class="btn btn-success btn-sm mb-2"><i class="fa-solid fa-pen"></i></a>
+                                <a href="edit.php?id=<?= $row['id']; ?>" class="btn btn-success btn-sm"><i class="fa-solid fa-pen"></i></a>
                                 <a href="?delete=<?= $row['id']; ?>" onclick="return confirm('Yakin ingin menghapus?')" class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>

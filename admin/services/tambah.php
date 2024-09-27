@@ -5,12 +5,13 @@ if (isset($_POST['submit'])) {
     $image = $_FILES['image']['name'];
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $description_2 = mysqli_real_escape_string($conn, $_POST['description_2']);
+    $link = mysqli_real_escape_string($conn, $_POST['link']);  // Ambil data link
     $target = "../../images/services/" . basename($image);
 
     // Upload gambar
     if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
-        // Simpan gambar dan deskripsi ke database
-        $query = "INSERT INTO services (image_url, description, description_2) VALUES ('$image', '$description', '$description_2')";
+        // Simpan gambar, deskripsi, deskripsi kedua, dan link ke database
+        $query = "INSERT INTO services (image_url, description, description_2, link) VALUES ('$image', '$description', '$description_2', '$link')";
         mysqli_query($conn, $query);
         header('Location: index.php');
     } else {
@@ -39,6 +40,10 @@ include "../layout/header-admin.php";
                 <div class="mb-3">
                     <label for="description_2" class="form-label">Deskripsi Kedua</label>
                     <textarea name="description_2" class="form-control" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="link" class="form-label">Link Layanan</label>
+                    <input type="text" name="link" class="form-control" required>
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary">Simpan</button>
             </form>

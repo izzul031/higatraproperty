@@ -8,6 +8,7 @@ if (isset($_POST['submit'])) {
     $image = $service['image_url'];
     $description = mysqli_real_escape_string($conn, $_POST['description']);
     $description_2 = mysqli_real_escape_string($conn, $_POST['description_2']);
+    $link = mysqli_real_escape_string($conn, $_POST['link']); // Ambil data link
 
     // Jika gambar diupload, maka gunakan gambar yang baru
     if ($_FILES['image']['name']) {
@@ -16,7 +17,7 @@ if (isset($_POST['submit'])) {
         move_uploaded_file($_FILES['image']['tmp_name'], $target);
     }
 
-    $query = "UPDATE services SET image_url = '$image', description = '$description', description_2 = '$description_2' WHERE id = $id";
+    $query = "UPDATE services SET image_url = '$image', description = '$description', description_2 = '$description_2', link = '$link' WHERE id = $id";
     mysqli_query($conn, $query);
     header('Location: index.php');
 }
@@ -29,7 +30,7 @@ include "../layout/header-admin.php";
         <div class="card-header text-center">
             <h5>Edit Layanan</h5>
         </div>
-        <div class="card-body">
+        <div class="card-body bg-black text-white">
             <form method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="image" class="form-label">Gambar Layanan</label>
@@ -43,6 +44,10 @@ include "../layout/header-admin.php";
                 <div class="mb-3">
                     <label for="description_2" class="form-label">Deskripsi Kedua</label>
                     <textarea name="description_2" class="form-control" required><?= $service['description_2']; ?></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="link" class="form-label">Link Layanan</label>
+                    <input type="text" name="link" class="form-control" value="<?= $service['link']; ?>" required> <!-- Tambahkan field untuk link -->
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary">Update</button>
             </form>

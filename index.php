@@ -215,9 +215,9 @@
   ?>
 
   <section class="t_section layout_padding">
-    <div class="container-fluid informasi">
+    <div class="container informasi">
       <div class="heading_container navy3 mb-5">
-        <h2>Informasi Dan Layanan</h2>
+        <h2>Layanan Kami</h2>
       </div>
       <div class="row justify-content-center" style="margin-bottom: -100px;">
         <?php
@@ -226,13 +226,12 @@
         $result = mysqli_query($conn, $query);
         while ($row = mysqli_fetch_assoc($result)): ?>
           <div class="col-6 col-sm-4 col-md-2 mb-5">
-            <div class="service-icon" onclick="toggleDescription(<?= $row['id']; ?>)">
-              <img src="images/services/<?= $row['image_url']; ?>" alt="<?= $row['description']; ?>">
-            </div>
-            <p class="service-title"><?= $row['description']; ?></p>
-            <div class="service-description-wrapper">
-              <p class="service-description" id="description-<?= $row['id']; ?>"><?= $row['description_2']; ?></p>
-            </div>
+            <a href="<?= $row['link']; ?>" class="service-link" target="_blank">
+              <div class="service-icon">
+                <img src="images/services/<?= $row['image_url']; ?>" alt="<?= $row['description']; ?>">
+              </div>
+              <p class="service-title"><?= $row['description']; ?></p>
+            </a>
           </div>
         <?php endwhile; ?>
       </div>
@@ -240,9 +239,8 @@
   </section>
 
 
-
-
   <!-- n inforrmasi dan layanan -->
+
   <!-- <div class="container-fluid cont-img">
         <div class="wrapper">
           <i id="left" class="fa-solid fa-angle-left"></i>
@@ -406,55 +404,6 @@
         </div>
       </div>
     </div>
-  </section> -->
-
-
-  <section class="us_section2 layout_padding">
-    <div class="container tabel_harga">
-      <div class="heading_container navy2 mb-5">
-        <h2>TABEL HARGA JASA BANGUN</h2>
-      </div>
-
-      <div class="us_container ">
-        <div class="row justify-content-center mt-5">
-          <?php
-          include 'kon/koneksi.php'; // Pastikan Anda menghubungkan ke database
-          $query = "SELECT * FROM us_section2"; // Ganti dengan nama tabel yang sesuai
-          $result = mysqli_query($conn, $query);
-
-          while ($row = mysqli_fetch_assoc($result)) {
-          ?>
-            <div class="col-md-3">
-              <div class="pricing-card">
-                <h4>
-                  <div class="badge badge-secondary">
-                    <?= $row['type']; ?>
-                  </div>
-                </h4>
-                <div class="price">
-                  <h2>Rp. <?= number_format($row['harga'], 0, ',', '.'); ?></h2>
-                </div>
-                <ul class="features list-unstyled text-left">
-                  <?php
-                  $fasilitas = explode(',', $row['fasilitas']); // Misalkan fasilitas disimpan sebagai string yang dipisahkan koma
-                  foreach ($fasilitas as $f) {
-                    echo '<li class="d-flex align-items-center">
-                                            <i class="fas fa-check-circle text-success mr-2"></i> ' . htmlspecialchars($f) . '
-                                          </li>';
-                  }
-                  ?>
-                </ul>
-
-                <a href="https://wa.me/<?= $row['nomor_whatsapp']; ?>?text=Saya%20ingin%20pesan%20yang%20<?= urlencode($row['type']); ?>" class="btn btn-dark btn-block btn-custom">Pesan Sekarang</a>
-              </div>
-            </div>
-          <?php } ?>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end us section -->
 
   <!-- alasan memilih kami -->
   <section class="us_section layout_padding">
@@ -601,7 +550,7 @@
       <div class="container">
 
         <div class="heading_container navy5" style="color: #AA8D3F;">
-          <h2>APA KATA CLIENT KITA!!!</h2>
+          <h2>TESTIMONI</h2>
         </div>
 
         <!-- Carousel Wrapper -->
