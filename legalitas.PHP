@@ -222,7 +222,7 @@
             <p class="text-justify">
                 Menjadi perusahaan konstruksi yang <b style="color: #AA8D3F;">mengedepankan kualitas dan jaminan produk terbaik di
                     Indonesia.</b> memberikan kontribusi positif bagi klien yang membutuhkan jasa bangun
-                <b style="color: #AA8D3F;">BERGARANSI</b> di Indonesia. 
+                <b style="color: #AA8D3F;">BERGARANSI</b> di Indonesia.
             </p>
         </div>
     </div>
@@ -587,9 +587,17 @@
 
             <!-- footer section -->
             <?php include "layout/footer.html" ?>
+
+
+
+            <!-- footer section -->
+
             <script src="js/jquery-3.4.1.min.js"></script>
             <script src="js/bootstrap.js"></script>
+            <script src="js/carousel.js"></script>
+
             <script src="js/index.js"></script>
+
     </body>
 
     </html>
