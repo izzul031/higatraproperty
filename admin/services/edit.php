@@ -47,7 +47,7 @@ include "../layout/header-admin.php";
                 </div>
                 <div class="mb-3">
                     <label for="link" class="form-label">Link Layanan</label>
-                    <input type="text" name="link" class="form-control" value="<?= $service['link']; ?>" required> <!-- Tambahkan field untuk link -->
+                    <input type="text" name="link" class="form-control" value="<?= $service['link']; ?>"> <!-- Tambahkan field untuk link -->
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary">Update</button>
             </form>
