@@ -341,6 +341,41 @@
                 position: absolute;
                 right: -60px;
             }
+            .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+            }
+
+            /* Create four equal columns that sits next to each other */
+            .column {
+            flex: 15%;
+            /* max-width: 15%; */
+            /* padding: 0 4px; */
+            }
+
+            .column img {
+            margin-top: 20px;
+            /* vertical-align: middle; */
+            width: 95%;
+            justify-content: center;
+            }
+
+            /* Responsive layout - makes a two column-layout instead of four columns */
+            @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+            }
+
+            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+            }
         </style>
     </head>
 
@@ -362,15 +397,20 @@
     <div class="row">
     <div class="column">
         <img src="../higatra/images/Legalitas/potret1.jpg">
-        <img src="../higatra/images/Legalitas/potret2.jpg">
-        <img src="../higatra/images/Legalitas/potret3.jpg">
-
     </div>
     <div class="column">
         <img src="../higatra/images/Legalitas/Picture13.jpg">
         <img src="../higatra/images/Legalitas/Picture23.jpg">
+    </div>
+    <div class="column">
+        <img src="../higatra/images/Legalitas/potret2.jpg">
+    </div>
+    <div class="column">
         <img src="../higatra/images/Legalitas/Picture33.jpg">
         <img src="../higatra/images/Legalitas/Picture43.jpg">
+    </div>
+    <div class="column">
+         <img src="../higatra/images/Legalitas/potret3.jpg">
     </div>
     </div>
 
