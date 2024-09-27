@@ -53,7 +53,7 @@
               <!-- Submit button -->
               <!-- <button type="submit" class="btn btn-primary btn-lg">Login in</button> -->
               <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4" style="width: 400px; height:100%">
-                <input type="submit" value="LOGIN" name="login" class="btn btn-warning btn-block btn-lg text-light my-2 py-3 " style="width:100% ; border-radius: 12px; font-weight:600;" />
+                <input type="submit" value="LOGIN" name="login" class="btn btn-custom btn-block btn-lg text-light my-2 py-3 " style="width:100% ; border-radius: 12px; font-weight:600;" />
               </div>
 
             </form><br>
