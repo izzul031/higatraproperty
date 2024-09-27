@@ -45,6 +45,10 @@ function toggleDescription(id) {
     }
 }
 
+$('#heroCarousel').carousel({
+    interval: 3000,  // Interval slide otomatis (3 detik)
+    ride: 'carousel'
+});
 
 
 
