@@ -520,13 +520,13 @@
     <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
       <i class="fab fa-whatsapp"></i>
     </a>
-    <a href="https://www.instagram.com/username" target="_blank" class="instagram-float">
+    <a href="https://www.instagram.com/higatra_property" target="_blank" class="instagram-float">
       <i class="fab fa-instagram"></i>
     </a>
     <a href="https://www.facebook.com/username" target="_blank" class="facebook-float">
       <i class="fab fa-facebook"></i>
     </a>
-    <a href="https://www.youtube.com/channel/username" target="_blank" class="youtube-float">
+    <a href="https://www.youtube.com/@HigatraProperty" target="_blank" class="youtube-float">
       <i class="fab fa-youtube"></i>
     </a>
   </div>

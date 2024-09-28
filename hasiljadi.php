@@ -23,91 +23,6 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
 
-    <!-- <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            background-color: white;
-            padding: 10px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar img {
-            height: 50px;
-            margin-right: 10px;
-        }
-
-        .navbar h1 {
-            font-size: 24px;
-            margin: 0;
-            margin-right: auto;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            color: black;
-            margin: 0 15px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .navbar a:hover {
-            color: gray;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: white;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            padding: 10px;
-            border-radius: 5px;
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 8px 20px;
-            text-decoration: none;
-            display: block;
-            border-radius: 0;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown a i {
-            transition: transform 0, 3s ease;
-        }
-
-        .dropdown a i.rotate {
-            transform: rotate(180deg);
-        }
-
-        .dropdown:hover .dropbtn {
-            color: gray;
-        }
-
-        .header-image {
-            width: 100%;
-            height: auto;
-        }
-    </style> -->
 </head>
 
 <body>
@@ -243,15 +158,15 @@
                 display: none;
                 position: fixed;
                 z-index: 1;
-                padding-top: 60px;
+                padding-top: 10px;
                 left: 0;
                 top: 0;
-                width: 100%;
-                height: 100%;
+                /* width: 100%;
+                height: 100%; */
                 overflow: auto;
                 background-color: rgb(0, 0, 0);
                 background-color: rgba(0, 0, 0, 0.9);
-                margin-top: 100px;
+                margin-top: auto;
             }
 
             .modal-content {
@@ -292,53 +207,92 @@
                 text-decoration: none;
                 cursor: pointer;
             }
+
             /* Media Query untuk tampilan lebih kecil */
             @media (max-width: 600px) {
                 .card {
                     max-width: 100%;
                     margin: 5px;
                 }
-            }    
+            }
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .modal-content {
+                display: block;
+                margin: auto;
+                max-width: 50%;
+                max-height: 100%;
+            }
+
+            .close {
+                position: absolute;
+                top: 20px;
+                right: 35px;
+                color: white;
+                font-size: 40px;
+                font-weight: bold;
+            }
         </style>
     </head>
 
     <body>
         <?php
-        include 'kon/koneksi.php';
-        $hasil_jadi = mysqli_query($conn, "SELECT * FROM hasil_jadi");
-        ?>
+include 'kon/koneksi.php';
+$hasil_jadi = mysqli_query($conn, "SELECT * FROM hasil_jadi");
+?>
 
-        <div class="container" style="margin-top: 100px;">
-            <h1>Hasil Jadi</h1>
-            <?php while ($row = mysqli_fetch_assoc($hasil_jadi)): ?>
-                <div class="card">
-                    <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/hasil_jadi/<?= $row['gambar']; ?>" width="300" />
-                    <div class="card-description">
-                        <?= $row['deskripsi']; ?>
-                    </div>
-                </div>
-            <?php endwhile; ?>
+<div class="container" style="margin-top: 100px;">
+    <h1>Hasil Jadi</h1>
+    <?php while ($row = mysqli_fetch_assoc($hasil_jadi)): ?>
+        <div class="card">
+            <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/hasil_jadi/<?= $row['gambar']; ?>" width="300" />
+            <div class="card-description">
+                <?= $row['deskripsi']; ?>
+            </div>
         </div>
-        <div class="modal" id="myModal">
-            <span class="close" id="closeModal">&times;</span>
-            <img class="modal-content" id="img01" />
-        </div>
-        <script>
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("img01");
-            var closeModal = document.getElementById("closeModal");
+    <?php endwhile; ?>
+</div>
 
-            document.querySelectorAll('.card img').forEach(img => {
-                img.onclick = function() {
-                    modal.style.display = "block";
-                    modalImg.src = this.src;
-                }
-            });
+<div class="modal" id="myModal">
+    <span class="close" id="closeModal">&times;</span>
+    <img class="modal-content" id="img01" />
+</div>
 
-            closeModal.onclick = function() {
-                modal.style.display = "none";
-            }
-        </script>
+<script>
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+    var closeModal = document.getElementById("closeModal");
+
+    document.querySelectorAll('.card img').forEach(img => {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+        }
+    });
+
+    closeModal.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close modal when clicking outside of the modal content
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
 
         <!-- alamat section  -->
 
