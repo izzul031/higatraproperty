@@ -1,7 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #000000;
-  background-color: #ffffff;
+  background-color: #000;
 }
 
 .layout_padding {
@@ -264,6 +264,7 @@ body {
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    /* margin-top: 100px; */
   }
   
   .hero-slideshow {
@@ -274,6 +275,7 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
+    /* background-size: 95%; */
     animation: slideshow 35s infinite;
 }
 
@@ -1252,6 +1254,7 @@ a:focus {
   place-items: center;
   padding-top: 50px;
   bottom: 10px;
+  background-color: #fff;
 }
 
 /* .section_partner h1 {
