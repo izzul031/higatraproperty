@@ -403,14 +403,14 @@
         <img src="../higatra/images/Legalitas/Picture23.jpg">
     </div>
     <div class="column">
-        <img src="../higatra/images/Legalitas/potret2.jpg">
+        <img src="../higatra/images/Legalitas/potret3.jpg">
     </div>
     <div class="column">
         <img src="../higatra/images/Legalitas/Picture33.jpg">
         <img src="../higatra/images/Legalitas/Picture43.jpg">
     </div>
     <div class="column">
-         <img src="../higatra/images/Legalitas/potret3.jpg">
+         <img src="../higatra/images/Legalitas/potret2.jpg">
     </div>
     </div>
 
@@ -633,7 +633,7 @@
                 <a href="https://www.facebook.com/username" target="_blank" class="facebook-float">
                 <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://www.youtube.com/channel/HigatraProperty" target="_blank" class="youtube-float">
+                <a href="https://www.youtube.com/@HigatraProperty" target="_blank" class="youtube-float">
                 <i class="fab fa-youtube"></i>
                 </a>
             </div>

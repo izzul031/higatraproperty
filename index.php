@@ -526,7 +526,7 @@
     <a href="https://www.facebook.com/username" target="_blank" class="facebook-float">
       <i class="fab fa-facebook"></i>
     </a>
-    <a href="https://www.youtube.com/channel/HigatraProperty" target="_blank" class="youtube-float">
+    <a href="https://www.youtube.com/@HigatraProperty" target="_blank" class="youtube-float">
       <i class="fab fa-youtube"></i>
     </a>
   </div>
