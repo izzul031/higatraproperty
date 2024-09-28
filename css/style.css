@@ -1327,7 +1327,8 @@ a:focus {
 .whatsapp-float,
 .instagram-float,
 .facebook-float,
-.youtube-float {
+.youtube-float,
+.tiktok-float {
   background-color: #25d366;
   /* Default warna hijau WhatsApp */
   color: #ffffff;
@@ -1366,6 +1367,11 @@ a:focus {
   background-color: #FF0000;
   /* Warna untuk YouTube */
 }
+
+.tiktok-float {
+  background-color: #000;
+}
+
 .service-icon {
   background-color: #AA8D3F;
   width: 80px;

@@ -636,6 +636,9 @@
                 <a href="https://www.youtube.com/@HigatraProperty" target="_blank" class="youtube-float">
                 <i class="fab fa-youtube"></i>
                 </a>
+                <a href="https://www.tiktok.com/@higatraproperty" target="_blank" class="tiktok-float">
+                <i class="fab fa-tiktok"></i>
+                </a>
             </div>
 
 
