@@ -610,6 +610,49 @@ a:focus {
   margin-top: 20px;
 }
 
+.pricing-card2 {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+  box-shadow: 5px 5px 0px #C0C0C0;
+  background-color: #ffffff;
+  color: #000;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pricing-card2 .features {
+  max-height: 100px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+/* Custom scrollbar */
+.pricing-card2 .features::-webkit-scrollbar {
+  width: 8px;
+}
+
+.pricing-card2 .features::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.pricing-card2 .features::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.pricing-card2 .features::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.pricing-card2 .price {
+  margin-bottom: 10px;
+}
 .heathy_section {
   background-image: url(../images/healthy-bg.jpg);
   background-size: cover;
