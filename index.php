@@ -517,7 +517,7 @@
     HUBUNGI KAMI!
   </a> -->
   <div class="social-media-float">
-    <a href="https://wa.me/123456?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
       <i class="fab fa-whatsapp"></i>
     </a>
     <a href="https://www.instagram.com/username" target="_blank" class="instagram-float">
