@@ -69,7 +69,7 @@ if (!$service) {
                         while ($row = mysqli_fetch_assoc($interior_result)) {
                     ?>
                             <div class="col-md-3">
-                                <div class="pricing-card equal-height">
+                                <div class="pricing-card2">
                                     <h4>
                                         <div class="badge badge-secondary">
                                             <?= $row['type']; ?>
@@ -112,7 +112,7 @@ if (!$service) {
                         while ($row = mysqli_fetch_assoc($eksterior_result)) {
                     ?>
                             <div class="col-md-3">
-                                <div class="pricing-card">
+                                <div class="pricing-card2">
                                     <h4>
                                         <div class="badge badge-secondary">
                                             <?= $row['type']; ?>
