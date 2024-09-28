@@ -1292,7 +1292,7 @@ a:focus {
   /* Ukuran kotak */
   height: 50px;
   /* Ukuran kotak */
-  border-radius: 50%;
+  border-radius: 10%;
   /* Membuat bentuk lingkaran */
   display: flex;
   justify-content: center;
