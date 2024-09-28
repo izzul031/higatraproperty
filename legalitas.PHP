@@ -516,7 +516,7 @@
                 text-decoration: none;
             }
 
-            .whatsapp-float {
+            /* .whatsapp-float {
                 position: fixed;
                 bottom: 20px;
                 right: 20px;
@@ -533,6 +533,61 @@
 
             .whatsapp-float i {
                 margin-right: 10px;
+            } */
+
+            */ .social-media-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: row;
+            /* Tetap horizontal */
+            gap: 10px;
+            /* Jarak antar ikon */
+            z-index: 1000;
+            }
+
+            .whatsapp-float,
+            .instagram-float,
+            .facebook-float,
+            .youtube-float {
+            background-color: #25d366;
+            /* Default warna hijau WhatsApp */
+            color: #ffffff;
+            width: 50px;
+            /* Ukuran kotak */
+            height: 50px;
+            /* Ukuran kotak */
+            border-radius: 10%;
+            /* Membuat bentuk lingkaran */
+            display: flex;
+            justify-content: center;
+            /* Posisikan ikon di tengah secara horizontal */
+            align-items: center;
+            /* Posisikan ikon di tengah secara vertikal */
+            font-size: 24px;
+            /* Ukuran ikon */
+            cursor: pointer;
+            }
+
+            .whatsapp-float {
+            background-color: #25d366;
+            /* Warna untuk WhatsApp */
+            }
+
+            .instagram-float {
+            background-color: #E1306C;
+            /* Warna untuk Instagram */
+            }
+
+            .facebook-float {
+            background-color: #3b5998;
+            /* Warna untuk Facebook */
+            }
+
+            .youtube-float {
+            background-color: #FF0000;
+            /* Warna untuk YouTube */
             }
         </style>
     </head>
@@ -563,10 +618,25 @@
 
             </div>
 
-            <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
+            <!-- <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
                 <i class="fab fa-whatsapp" style="margin-right: 10px;"></i>
-                HUBUNGI KAMI!
-            </a>
+                
+            </a> -->
+
+            <div class="social-media-float">
+                <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
+                <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.instagram.com/higatra_property" target="_blank" class="instagram-float">
+                <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/username" target="_blank" class="facebook-float">
+                <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/HigatraProperty" target="_blank" class="youtube-float">
+                <i class="fab fa-youtube"></i>
+                </a>
+            </div>
 
 
 
