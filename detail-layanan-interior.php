@@ -145,7 +145,6 @@ if (!$service) {
 
         </div>
     </section>
-    <?php include "layout/footer.html" ?>
 
 
 
