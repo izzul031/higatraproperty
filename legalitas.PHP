@@ -396,21 +396,21 @@
     </h2>
     <div class="row">
     <div class="column">
-        <img src="../higatra/images/Legalitas/potret1.jpg">
+        <img src="../images/Legalitas/potret1.jpg">
     </div>
     <div class="column">
-        <img src="../higatra/images/Legalitas/Picture13.jpg">
-        <img src="../higatra/images/Legalitas/Picture23.jpg">
+        <img src="../images/Legalitas/Picture23.jpg">
+        <img src="../images/Legalitas/Picture13.jpg">
     </div>
     <div class="column">
-        <img src="../higatra/images/Legalitas/potret3.jpg">
+        <img src="../images/Legalitas/potret3.jpg">
     </div>
     <div class="column">
-        <img src="../higatra/images/Legalitas/Picture33.jpg">
-        <img src="../higatra/images/Legalitas/Picture43.jpg">
+        <img src="../images/Legalitas/Picture33.jpg">
+        <img src="../images/Legalitas/Picture43.jpg">
     </div>
     <div class="column">
-         <img src="../higatra/images/Legalitas/potret2.jpg">
+         <img src="../images/Legalitas/potret2.jpg">
     </div>
     </div>
 
@@ -635,6 +635,9 @@
                 </a>
                 <a href="https://www.youtube.com/@HigatraProperty" target="_blank" class="youtube-float">
                 <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.tiktok.com/@higatraproperty" target="_blank" class="tiktok-float">
+                <i class="fab fa-tiktok"></i>
                 </a>
             </div>
 
