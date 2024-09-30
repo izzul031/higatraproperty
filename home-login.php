@@ -56,10 +56,15 @@
               <input type="submit" value="LOGIN" name="login" class="btn btn-custom2 btn-block btn-lg text-light my-2 py-3" />
             </div>
 
-            <!-- Google Login Button -->
+            <!-- Registration Link -->
+            <div class="d-flex justify-content-center mt-3">
+              <p>Don't have an account? <a href="register.php" class="text-decoration-none" style="color: inherit;">Register</a></p>
+            </div>
+
+            <!-- Google Login Button
             <div class="d-flex justify-content-center input-group mt-3">
               <a href="YOUR_GOOGLE_AUTH_URL" class="btn btn-danger btn-block btn-lg text-light my-2 py-3">Login dengan Google</a>
-            </div>
+            </div> -->
 
             
           </form>

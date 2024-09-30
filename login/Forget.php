@@ -29,18 +29,18 @@ if (isset($_POST['submit'])) {
                 $mail->isSMTP();                                            //Send using SMTP
                 $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
                 $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                $mail->Username   = 'speedxxxx7@gmail.com';                     //SMTP username
+                $mail->Username   = 'izzulqodir031@gmail.com';                     //SMTP username
                 $mail->Password   = '';                               //SMTP password
                 $mail->SMTPSecure = 'Tls';            //Enable implicit TLS encryption
                 $mail->Port       = 25;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
                 //Recipients
-                $mail->setFrom('speedxxxx7@gmail.com', 'Eagle');
+                $mail->setFrom('izzulqodir031@gmail.com', 'Eagle');
                 $mail->addAddress($email);
                 //Content
                 $mail->isHTML(true);                                  //Set email format to HTML
                 $mail->Subject = 'Welecom To My Website';
-                $mail->Body    = '<p> This is the Verifecation Link<b><a href="http://localhost/coursephp/P1/Sliding/change-Password.php?Reset=' . $CodeReset . '">"http://localhost/coursephp/P1/Sliding/change-Password.php?Reset=' . $CodeReset . '"</a></b></p>';
+                $mail->Body    = '<p> This is the Verifecation Link<b><a href="http://localhost/higatraproperty/login/change-Password.php?Reset=' . $CodeReset . '">"http://localhost/higatraproperty/login/change-Password.php?Reset=' . $CodeReset . '"</a></b></p>';
 
                 $mail->send();
             } catch (Exception $e) {
