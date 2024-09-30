@@ -459,17 +459,23 @@
                   <?php endif; ?>
 
                   <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-item">
+                    <div class="testimonial-item d-flex align-items-center">
                       <div class="quote-icon">
                         <i class="fa fa-quote-left"></i>
                       </div>
-                      <p class="deskripsi">"<?= $row['deskripsi']; ?>"</p>
-                      <img src="images/testimonials/<?= $row['gambar']; ?>" class="img-fluid rounded-circle mt-3 gambar-klien" alt="Client Image" style="width: 70px; height: 70px;">
-                      <h6 class="nama-klien"><?= $row['nama']; ?></h6>
-                      <small class="profesi-klien"><?= $row['profesi']; ?></small> <br>
-                      <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-dark mt-3">Detail</a>
+                      <div class="testimonial-left">
+                        <img src="images/testimonials/<?= $row['gambar']; ?>" class="img-fluid rounded-circle gambar-klien" alt="Client Image" style="width: 70px; height: 70px;">
+                        <h6 class="nama-klien mt-2"><?= $row['nama']; ?></h6>
+                        <small class="profesi-klien"><?= $row['profesi']; ?></small>
+                      </div>
+                      <div class="testimonial-right">
+
+                        <p class="deskripsi">"<?= $row['deskripsi']; ?>"</p>
+                        <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-dark mt-3">Detail</a>
+                      </div>
                     </div>
                   </div>
+
 
                   <?php if ($count % 3 == 2): ?>
                   </div>
