@@ -6,7 +6,7 @@ if (isset($_SESSION['Email_Session'])) {
 }
 
 
-include('config.php');
+include('../kon/koneksi.php');
 $msg = "";
 $Error_Pass = "";
 if (isset($_GET['Verification'])) {
