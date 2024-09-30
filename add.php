@@ -9,11 +9,11 @@ if(isset($_POST['register']))
 
     $sql   ="INSERT INTO `users`(`username`, `email`, `password`) VALUES ('$name','$username','$pass')";
     $result=mysqli_query($conn,$sql);
-    if($result){ 
+    if($result){
     header('location:index.php');
     echo"<script>alert('New User Register Success');</script>";   
     }else{
         die(mysqli_error($conn)) ;
     }
-   
+
 }
