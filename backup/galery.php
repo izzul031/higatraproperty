@@ -63,19 +63,6 @@
 
     <head>
         <style>
-            .gallery-wrapper {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                /* Center the images */
-            }
-
-            /* .card {
-                flex-basis: calc(10.333% - 20px);
-                margin: 10px;
-                box-sizing: border-box;
-            } */
-
             body {
                 background-color: #f4f4f4;
                 margin: 0;
@@ -101,12 +88,10 @@
             }
 
             .card {
-                flex-basis: calc(10.333% - 20px);
-
                 display: inline-block;
                 width: 330px;
                 height: 250px;
-                margin: 1%;
+                /* margin: 1%; */
                 background-color: #333;
                 border-radius: 10px;
                 overflow: hidden;
@@ -139,7 +124,7 @@
                 width: 400px;
                 height: 250px;
                 display: flex;
-                justify-self: center;
+                justify-self:center;
                 align-items: center;
                 /* aspect-ratio: 16 / 9; */
                 object-fit: cover;
@@ -260,8 +245,7 @@
                 font-weight: bold;
             }
 
-            .prev,
-            .next {
+            .prev, .next {
                 cursor: pointer;
                 position: absolute;
                 top: 50%;
@@ -283,23 +267,8 @@
                 right: 0;
             }
 
-            .prev:hover,
-            .next:hover {
+            .prev:hover, .next:hover {
                 background-color: rgba(0, 0, 0, 0.8);
-            }
-
-            @media (max-width: 768px) {
-                .card {
-                    flex-basis: calc(50% - 20px);
-                    /* 2 cards per row on smaller screens */
-                }
-            }
-
-            @media (max-width: 480px) {
-                .card {
-                    flex-basis: calc(100% - 20px);
-                    /* 1 card per row on very small screens */
-                }
             }
         </style>
     </head>
@@ -307,37 +276,23 @@
     <body>
         <?php
         include 'kon/koneksi.php';
-        $query = "SELECT g.id, t.nama AS nama_klien, g.gambar, g.deskripsi 
-          FROM gambar_3d g
-          JOIN testimonials t ON g.id_klien = t.id
-          ORDER BY t.nama, g.id";
-        $result = mysqli_query($conn, $query);
-
-        $grouped_images = [];
-        while ($row = mysqli_fetch_assoc($result)) {
-            $grouped_images[$row['nama_klien']][] = $row;
+        $gambar_3d = mysqli_query($conn, "SELECT * FROM gambar_3d");
+        $images = [];
+        while ($row = mysqli_fetch_assoc($gambar_3d)) {
+            $images[] = $row;
         }
         ?>
 
-
-
         <div class="container" style="margin-top: 100px;">
-            <h1 style="text-align: center; margin-bottom: 40px;">Gambar 3D</h1>
-            <div class="gallery-wrapper">
-                <?php foreach ($grouped_images as $client_name => $images): ?>
-                    <div class="client-section">
-                        <!-- <h2 class="client-name"><?= htmlspecialchars($client_name) ?></h2> -->
-                        <div class="card">
-                            <img alt="<?= htmlspecialchars($images[0]['deskripsi']); ?>"
-                                src="images/gambar_3d/<?= htmlspecialchars($images[0]['gambar']); ?>"
-                                data-client="<?= htmlspecialchars($client_name) ?>" />
-                            <div class="card-description">
-                                <?= htmlspecialchars($images[0]['deskripsi']); ?>
-                            </div>
-                        </div>
+            <h1>Gambar 3D</h1>
+            <?php foreach ($images as $index => $row): ?>
+                <div class="card">
+                    <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/gambar_3d/<?= $row['gambar']; ?>" width="300" data-index="<?= $index ?>" />
+                    <div class="card-description">
+                        <?= $row['deskripsi']; ?>
                     </div>
-                <?php endforeach; ?>
-            </div>
+                </div>
+            <?php endforeach; ?>
         </div>
 
         <div class="modal" id="myModal">
@@ -354,15 +309,13 @@
             var prevSlide = document.getElementById("prevSlide");
             var nextSlide = document.getElementById("nextSlide");
 
-            var groupedImages = <?= json_encode($grouped_images) ?>;
-            var currentClient = '';
+            var images = <?= json_encode($images); ?>;
             var currentIndex = 0;
 
             document.querySelectorAll('.card img').forEach(img => {
                 img.onclick = function() {
-                    currentClient = this.getAttribute('data-client');
-                    currentIndex = 0;
-                    openModal(currentClient, currentIndex);
+                    currentIndex = parseInt(this.getAttribute('data-index'));
+                    openModal(currentIndex);
                 }
             });
 
@@ -371,27 +324,27 @@
             }
 
             prevSlide.onclick = function() {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : groupedImages[currentClient].length - 1;
-                openModal(currentClient, currentIndex);
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+                openModal(currentIndex);
             }
 
             nextSlide.onclick = function() {
-                currentIndex = (currentIndex < groupedImages[currentClient].length - 1) ? currentIndex + 1 : 0;
-                openModal(currentClient, currentIndex);
+                currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+                openModal(currentIndex);
             }
 
-            function openModal(client, index) {
+            function openModal(index) {
                 modal.style.display = "block";
-                modalImg.src = "images/gambar_3d/" + groupedImages[client][index].gambar;
+                modalImg.src = "images/gambar_3d/" + images[index].gambar;
             }
 
+            // Tambahkan event listener untuk close modal ketika area di luar gambar diklik
             modal.onclick = function(event) {
                 if (event.target === modal) {
                     modal.style.display = "none";
                 }
             }
         </script>
-
 
         <!-- alamat section  -->
 
