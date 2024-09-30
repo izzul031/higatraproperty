@@ -1,12 +1,12 @@
 <?php
 session_start();
-include_once('connection.php');
+include_once('db_connection.php');
 
-// if(isset($_SESSION['name']) && isset($_SESSION['username'] )){
+// if(isset($_SESSION['username']) && isset($_SESSION['email'] )){
 
 // }
-$_SESSION['name'];
 $_SESSION['username'];
+$_SESSION['email'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -15,7 +15,7 @@ $_SESSION['username'];
   <title>Welcome Form</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta username="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -69,8 +69,8 @@ $_SESSION['username'];
 
 
 <div class="container">
-<h3>Welcome,  <span><?=$_SESSION['name'];?></span></h3>
-<p>Your Email id is : <h6><?=$_SESSION['username'];?></h6></p>
+<h3>Welcome,  <span><?=$_SESSION['username'];?></span></h3>
+<p>Your Email id is : <h6><?=$_SESSION['email'];?></h6></p>
 <a href="index.php" class="btn">LOGOUT</a>
 </div>
 

@@ -7,7 +7,7 @@ if(isset($_POST['register']))
     $username=$_POST['username'];
     $pass=md5($_POST['password']);
 
-    $sql   ="INSERT INTO `tbl_user`(`name`, `username`, `password`) VALUES ('$name','$username','$pass')";
+    $sql   ="INSERT INTO `users`(`username`, `email`, `password`) VALUES ('$name','$username','$pass')";
     $result=mysqli_query($conn,$sql);
     if($result){ 
     header('location:index.php');

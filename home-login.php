@@ -48,8 +48,9 @@
 
             <!-- Forgot Password Link -->
             <div class="d-flex justify-content-end mt-2">
-              <a href="#" class="text-decoration-none" style="text-decoration: none; color: inherit;">Lupa kata sandi?</a>
+              <a href="forgot_password.php" class="text-decoration-none" style="text-decoration: none; color: inherit;">Lupa kata sandi?</a>
             </div>
+
 
             <!-- Login Button -->
             <div class="d-flex justify-content-center input-group">
