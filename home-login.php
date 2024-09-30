@@ -38,8 +38,6 @@
 
             <img src="images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" class="img-fluid mb-4" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:50px;">
 
-            <!-- <img src="images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" class="img-fluid mb-4" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:50px;"> -->
-
             <div class="form-outline mb-4 input-group">
               <input type="email" id="form1Example13" class="form-control form-control-lg py-3" name="username" autocomplete="off" placeholder="E-mail" />
             </div>
@@ -48,9 +46,22 @@
               <input type="password" id="form1Example23" class="form-control form-control-lg py-3" name="password" autocomplete="off" placeholder="Password" />
             </div>
 
+            <!-- Forgot Password Link -->
+            <div class="d-flex justify-content-end mt-2">
+              <a href="#" class="text-decoration-none" style="text-decoration: none; color: inherit;">Lupa kata sandi?</a>
+            </div>
+
+            <!-- Login Button -->
             <div class="d-flex justify-content-center input-group">
               <input type="submit" value="LOGIN" name="login" class="btn btn-custom2 btn-block btn-lg text-light my-2 py-3" />
             </div>
+
+            <!-- Google Login Button -->
+            <div class="d-flex justify-content-center input-group mt-3">
+              <a href="YOUR_GOOGLE_AUTH_URL" class="btn btn-danger btn-block btn-lg text-light my-2 py-3">Login dengan Google</a>
+            </div>
+
+            
           </form>
 
         </div>
