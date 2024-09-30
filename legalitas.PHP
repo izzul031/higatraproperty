@@ -199,7 +199,7 @@
         </div>
         <div class="content">
             <p style="text-align: justify; color:#fff">
-                <b style="color: #AA8D3F;">Higatra Property</b> adalah perusahaan kontruksi yang didirikan pada <b style="color: #AA8D3F;">>tahun 2017</b> oleh <b style="color: #AA8D3F;">Eko
+                <b style="color: #AA8D3F;">Higatra Property</b> adalah perusahaan kontruksi yang didirikan pada <b style="color: #AA8D3F;">tahun 2017</b> oleh <b style="color: #AA8D3F;">Eko
                     Heri Supriyanto.</b> Berawal dari keresahan, Higatra hadir di Masyarakat dengan <b style="color: #AA8D3F;">harga bangun
                     menyesuaikan dengan Komitmen produk inovasi dengan Garansi resmi 1 Tahun.</b>
             </p>
