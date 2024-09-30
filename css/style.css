@@ -197,9 +197,13 @@ body {
   padding: 20px;
   transition: transform 0.3s ease;
   /* box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.334); */
-  min-height: 150px;
-  /* Atur tinggi minimum card */
-}
+  width: 100%;
+    /* Membuat card lebih lebar */
+    min-height: 200px;
+    /* Atur tinggi card agar berbentuk persegi panjang ke samping */
+    max-width: 100%;
+    /* Batas maksimal lebar agar card tidak meluas */
+  }
 
 /* .testimonial-item:hover {
   transform: translateY(-10px);
@@ -220,6 +224,10 @@ body {
   flex: 2;
   padding-left: 20px;
   position: relative;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Memastikan deskripsi dan tombol diatur secara vertikal */
 }
 .testimonial-item .quote-icon {
   position: absolute;
@@ -239,6 +247,7 @@ body {
 .testimonial-item p {
   font-style: italic;
   color: #000000;
+    text-align: justify;
 }
 
 .testimonial-item h6 {
@@ -254,6 +263,10 @@ body {
   border: 2px solid #000000;
 }
 
+.testimonial-item a {
+  align-self: flex-end;
+  /* Memindahkan tombol ke kanan */
+}
 /* end testimonial */
 
 
