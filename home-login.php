@@ -7,6 +7,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS v5.2.1 -->
+  <link rel="icon" href="images/logo.png" type="image/x-icon">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <link rel="stylesheet" href="style.css">
@@ -35,8 +37,8 @@
             <p class="text-center h8 fw-bold mb-4 mx-1 mx-md-3 mt-3">WELCOME TO</p>
 
             <img src="../higatra/images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" class="img-fluid mb-4" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:50px;">
-            =======
-            <img src="../images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" class="img-fluid mb-4" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:50px;">
+
+            <!-- <img src="images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" class="img-fluid mb-4" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:50px;"> -->
 
             <div class="form-outline mb-4 input-group">
               <input type="email" id="form1Example13" class="form-control form-control-lg py-3" name="username" autocomplete="off" placeholder="E-mail" />
