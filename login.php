@@ -3,40 +3,44 @@ session_start();
 include_once('db_connection.php');
 
 if (isset($_POST['login'])) {
-
     $username = $_POST['username'];
-    $password = md5($_POST['password']);
+    $password = $_POST['password'];
 
-    $sql = "SELECT * FROM `users` WHERE `email`='$username' AND `password`='$password'";
-    $result = mysqli_query($conn, $sql);
+    // Query untuk memeriksa pengguna
+    $sql = "SELECT * FROM `users` WHERE `username` = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param('s', $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if (empty($_POST['email']) && empty($_POST['password'])) {
-        echo "<script>alert('Please Fill email and Password');</script>";
+    if (empty($_POST['username']) && empty($_POST['password'])) {
+        echo "<script>alert('Please Fill Username and Password');</script>";
         exit;
     } elseif (empty($_POST['password'])) {
         echo "<script>alert('Please Fill Password');</script>";
         exit;
-    } elseif (empty($_POST['email'])) {
-        echo "<script>alert('Please Fill email);</script>";
+    } elseif (empty($_POST['username'])) {
+        echo "<script>alert('Please Fill Username');</script>";
         exit;
     } else {
-        if (mysqli_num_rows($result) > 0) {
-            $row = mysqli_fetch_array($result);
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
             $name = $row['name'];
-            $username = $row['email'];
-            $password = $row['password'];
+            $storedPassword = $row['password'];
 
-
-            if ($username == $username && $password == $password) {
+            // Verifikasi password
+            if (password_verify($password, $storedPassword)) {
                 $_SESSION['name'] = $name;
-                $_SESSION['email'] = $username;
-                $_SESSION['password'] = $password;
+                $_SESSION['username'] = $username;
                 header('location:welcome.php');
+            } else {
+                echo "<script>alert('Invalid Username or Password');</script>";
+                exit;
             }
         } else {
             echo "<script>alert('Invalid Username or Password');</script>";
             exit;
         }
     }
-
 }
+?>

@@ -1,32 +1,32 @@
 <?php
+// process_forgot_password.php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php'; // Pastikan sudah menginstal PHPMailer via Composer
+require 'vendor/autoload.php'; // Pastikan PHPMailer diinstal
+
+include('db_connection.php');
 
 if (isset($_POST['submit'])) {
-    // Koneksi ke database
-    include('db_connection.php');
-    
-    $usernameEmail = $_POST['usernameEmail'];
-    
+    $nameUsername = $_POST['nameUsername'];
+
     // Cek apakah input adalah email atau username
-    if (filter_var($usernameEmail, FILTER_VALIDATE_EMAIL)) {
-        $query = "SELECT * FROM users WHERE email = ?";
+    if (filter_var($nameUsername, FILTER_VALIDATE_EMAIL)) {
+        $query = "SELECT * FROM users WHERE username = ?"; // Menggunakan email
     } else {
-        $query = "SELECT * FROM users WHERE username = ?";
+        $query = "SELECT * FROM users WHERE name = ?"; // Menggunakan nama
     }
 
     // Siapkan statement untuk mencegah SQL Injection
     $stmt = $conn->prepare($query);
-    $stmt->bind_param('s', $usernameEmail);
+    $stmt->bind_param('s', $nameUsername);
     $stmt->execute();
     $result = $stmt->get_result();
-    
+
     if ($result->num_rows > 0) {
         // Jika user ditemukan
         $user = $result->fetch_assoc();
-        $email = $user['email'];
+        $email = $user['username']; // Ambil email dari kolom username
         $token = bin2hex(random_bytes(50)); // Generate random token for reset link
         
         // Simpan token di database dengan masa kadaluarsa
