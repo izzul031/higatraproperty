@@ -36,7 +36,7 @@
           <form class="form_login" action="login.php" method="post">
             <p class="text-center h8 fw-bold mb-4 mx-1 mx-md-3 mt-3">WELCOME TO</p>
 
-            <img src="../higatra/images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" class="img-fluid mb-4" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:50px;">
+            <img src="images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" class="img-fluid mb-4" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:50px;">
 
             <!-- <img src="images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" class="img-fluid mb-4" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:50px;"> -->
 
