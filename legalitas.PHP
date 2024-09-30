@@ -341,40 +341,41 @@
                 position: absolute;
                 right: -60px;
             }
+
             .row {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 4px;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0 4px;
             }
 
             /* Create four equal columns that sits next to each other */
             .column {
-            flex: 15%;
-            /* max-width: 15%; */
-            /* padding: 0 4px; */
+                flex: 15%;
+                /* max-width: 15%; */
+                /* padding: 0 4px; */
             }
 
             .column img {
-            margin-top: 20px;
-            /* vertical-align: middle; */
-            width: 95%;
-            justify-content: center;
+                margin-top: 20px;
+                /* vertical-align: middle; */
+                width: 95%;
+                justify-content: center;
             }
 
             /* Responsive layout - makes a two column-layout instead of four columns */
             @media screen and (max-width: 800px) {
-            .column {
-                flex: 50%;
-                max-width: 50%;
-            }
+                .column {
+                    flex: 50%;
+                    max-width: 50%;
+                }
             }
 
             /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
             @media screen and (max-width: 600px) {
-            .column {
-                flex: 100%;
-                max-width: 100%;
-            }
+                .column {
+                    flex: 100%;
+                    max-width: 100%;
+                }
             }
         </style>
     </head>
@@ -391,28 +392,28 @@
     ?>
 
     <div class="section-2" style="background-color: #000;">
-    <h2 class="text-center" style="color:#b59a3b; margin-top: 20px; font-family: 'Poppins', sans-serif;">
-        LEGALITAS
-    </h2>
-    <div class="row">
-    <div class="column">
-        <img src="../images/Legalitas/potret1.jpg">
-    </div>
-    <div class="column">
-        <img src="../images/Legalitas/Picture23.jpg">
-        <img src="../images/Legalitas/Picture13.jpg">
-    </div>
-    <div class="column">
-        <img src="../images/Legalitas/potret3.jpg">
-    </div>
-    <div class="column">
-        <img src="../images/Legalitas/Picture33.jpg">
-        <img src="../images/Legalitas/Picture43.jpg">
-    </div>
-    <div class="column">
-         <img src="../images/Legalitas/potret2.jpg">
-    </div>
-    </div>
+        <h2 class="text-center" style="color:#b59a3b; margin-top: 20px; font-family: 'Poppins', sans-serif;">
+            LEGALITAS
+        </h2>
+        <div class="row">
+            <div class="column">
+                <img src="images/Legalitas/potret1.jpg">
+            </div>
+            <div class="column">
+                <img src="images/Legalitas/Picture23.jpg">
+                <img src="images/Legalitas/Picture13.jpg">
+            </div>
+            <div class="column">
+                <img src="images/Legalitas/potret3.jpg">
+            </div>
+            <div class="column">
+                <img src="images/Legalitas/Picture33.jpg">
+                <img src="images/Legalitas/Picture43.jpg">
+            </div>
+            <div class="column">
+                <img src="images/Legalitas/potret2.jpg">
+            </div>
+        </div>
 
     </div>
 
@@ -536,58 +537,58 @@
             } */
 
             */ .social-media-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: row;
-            /* Tetap horizontal */
-            gap: 10px;
-            /* Jarak antar ikon */
-            z-index: 1000;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: flex;
+                flex-direction: row;
+                /* Tetap horizontal */
+                gap: 10px;
+                /* Jarak antar ikon */
+                z-index: 1000;
             }
 
             .whatsapp-float,
             .instagram-float,
             .facebook-float,
             .youtube-float {
-            background-color: #25d366;
-            /* Default warna hijau WhatsApp */
-            color: #ffffff;
-            width: 50px;
-            /* Ukuran kotak */
-            height: 50px;
-            /* Ukuran kotak */
-            border-radius: 10%;
-            /* Membuat bentuk lingkaran */
-            display: flex;
-            justify-content: center;
-            /* Posisikan ikon di tengah secara horizontal */
-            align-items: center;
-            /* Posisikan ikon di tengah secara vertikal */
-            font-size: 24px;
-            /* Ukuran ikon */
-            cursor: pointer;
+                background-color: #25d366;
+                /* Default warna hijau WhatsApp */
+                color: #ffffff;
+                width: 50px;
+                /* Ukuran kotak */
+                height: 50px;
+                /* Ukuran kotak */
+                border-radius: 10%;
+                /* Membuat bentuk lingkaran */
+                display: flex;
+                justify-content: center;
+                /* Posisikan ikon di tengah secara horizontal */
+                align-items: center;
+                /* Posisikan ikon di tengah secara vertikal */
+                font-size: 24px;
+                /* Ukuran ikon */
+                cursor: pointer;
             }
 
             .whatsapp-float {
-            background-color: #25d366;
-            /* Warna untuk WhatsApp */
+                background-color: #25d366;
+                /* Warna untuk WhatsApp */
             }
 
             .instagram-float {
-            background-color: #E1306C;
-            /* Warna untuk Instagram */
+                background-color: #E1306C;
+                /* Warna untuk Instagram */
             }
 
             .facebook-float {
-            background-color: #3b5998;
-            /* Warna untuk Facebook */
+                background-color: #3b5998;
+                /* Warna untuk Facebook */
             }
 
             .youtube-float {
-            background-color: #FF0000;
-            /* Warna untuk YouTube */
+                background-color: #FF0000;
+                /* Warna untuk YouTube */
             }
         </style>
     </head>
@@ -625,19 +626,19 @@
 
             <div class="social-media-float">
                 <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
-                <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-whatsapp"></i>
                 </a>
                 <a href="https://www.instagram.com/higatra_property" target="_blank" class="instagram-float">
-                <i class="fab fa-instagram"></i>
+                    <i class="fab fa-instagram"></i>
                 </a>
                 <a href="https://www.facebook.com/username" target="_blank" class="facebook-float">
-                <i class="fab fa-facebook"></i>
+                    <i class="fab fa-facebook"></i>
                 </a>
                 <a href="https://www.youtube.com/@HigatraProperty" target="_blank" class="youtube-float">
-                <i class="fab fa-youtube"></i>
+                    <i class="fab fa-youtube"></i>
                 </a>
                 <a href="https://www.tiktok.com/@higatraproperty" target="_blank" class="tiktok-float">
-                <i class="fab fa-tiktok"></i>
+                    <i class="fab fa-tiktok"></i>
                 </a>
             </div>
 
