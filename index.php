@@ -449,16 +449,16 @@
           <!-- Carousel Items -->
           <div class="carousel-inner">
             <?php
-            mysqli_data_seek($result, 0);
+            mysqli_data_seek($result, 0); // Reset pointer to the beginning of the result set
             $count = 0;
             while ($row = mysqli_fetch_assoc($result)):
             ?>
-              <?php if ($count % 2 == 0): ?>
+              <?php if ($count % 3 == 0): ?>
                 <div class="carousel-item <?= $count == 0 ? 'active' : ''; ?>">
                   <div class="row mt-5">
                   <?php endif; ?>
 
-                  <div class="col-lg-6 col-md-2 mb-4">
+                  <div class="col-lg-4 col-md-6 mb-4">
                     <div class="testimonial-item d-flex align-items-center">
                       <div class="quote-icon">
                         <i class="fa fa-quote-left"></i>
@@ -469,13 +469,15 @@
                         <small class="profesi-klien"><?= $row['profesi']; ?></small>
                       </div>
                       <div class="testimonial-right">
+
                         <p class="deskripsi">"<?= $row['deskripsi']; ?>"</p>
                         <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-dark mt-3">Detail</a>
                       </div>
                     </div>
                   </div>
 
-                  <?php if ($count % 2 == 1): ?>
+
+                  <?php if ($count % 3 == 2): ?>
                   </div>
                 </div>
               <?php endif; ?>
@@ -483,11 +485,13 @@
               $count++;
             endwhile;
             ?>
-            <?php if ($count % 2 != 0): ?>
+
+            <?php if ($count % 3 != 0): ?>
           </div>
         </div>
       <?php endif; ?>
       </div>
+    </div>
 
     </div>
     </div>
