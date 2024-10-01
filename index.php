@@ -567,7 +567,7 @@
           </div>
           <div class="col-md-3 isi_footer" style="margin-bottom: 2%;">
             <h5>Contact</h5>
-            <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
+            <p class="small"><i class="fas fa-envelope"></i> higatraapropertyy@gmail.com<br>
               <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
             </p>
           </div>
