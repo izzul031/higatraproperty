@@ -23,7 +23,7 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
 
-    <?php include "layout/navbar.html" ?>
+    <?php include "layout/navbar2.html" ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script>
         function toggleDropdown(event) {
@@ -237,109 +237,108 @@
                 font-size: 40px;
                 font-weight: bold;
             }
-
         </style>
     </head>
 
-    <body>
-        <?php
-include 'kon/koneksi.php';
-$bast = mysqli_query($conn, "SELECT * FROM bast");
-?>
+<body>
+    <?php
+    include 'kon/koneksi.php';
+    $bast = mysqli_query($conn, "SELECT * FROM bast");
+    ?>
 
-<div class="container" style="margin-top: 100px;">
-    <h1>BAST</h1>
-    <h4>(Berita Acara Serah Terima)</h4>
-    <?php while ($row = mysqli_fetch_assoc($bast)): ?>
-        <div class="card">
-            <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/bast/<?= $row['gambar']; ?>" width="300" />
-            <div class="card-description">
-                <?= $row['deskripsi']; ?>
+    <div class="container" style="margin-top: 100px;">
+        <h1>BAST</h1>
+        <h4>(Berita Acara Serah Terima)</h4>
+        <?php while ($row = mysqli_fetch_assoc($bast)): ?>
+            <div class="card">
+                <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/bast/<?= $row['gambar']; ?>" width="300" />
+                <div class="card-description">
+                    <?= $row['deskripsi']; ?>
+                </div>
             </div>
-        </div>
-    <?php endwhile; ?>
-</div>
+        <?php endwhile; ?>
+    </div>
 
-<div class="modal" id="myModal">
-    <span class="close" id="closeModal">&times;</span>
-    <img class="modal-content" id="img01" />
-</div>
+    <div class="modal" id="myModal">
+        <span class="close" id="closeModal">&times;</span>
+        <img class="modal-content" id="img01" />
+    </div>
 
-<script>
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("img01");
-    var closeModal = document.getElementById("closeModal");
+    <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var closeModal = document.getElementById("closeModal");
 
-    document.querySelectorAll('.card img').forEach(img => {
-        img.onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-        }
-    });
+        document.querySelectorAll('.card img').forEach(img => {
+            img.onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            }
+        });
 
-    closeModal.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // Close modal when clicking outside of the modal content
-    modal.onclick = function(event) {
-        if (event.target === modal) {
+        closeModal.onclick = function() {
             modal.style.display = "none";
         }
-    }
-</script>
+
+        // Close modal when clicking outside of the modal content
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
 
-        <!-- alamat section  -->
+    <!-- alamat section  -->
 
-        <footer>
-            <div class="footer">
-                <div class="container">
-                    <div class="row align-items-center row_footer">
-                        <div class="col-md-3">
-                            <div class="map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.900066300759!2d113.84915147483633!3d-7.021031992980595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e70057ed749f%3A0x92004152aeafb8ed!2sHIGATRA%20PROPERTY!5e0!3m2!1sid!2sid!4v1726040814118!5m2!1sid!2sid"
-                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                                </iframe>
-                            </div>
-                        </div>
-                        <div class="col-md-3 isi_footer" style="margin-top: 2%;">
-                            <h5>Address</h5>
-                            <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
-                                Kec.
-                                Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
-                        </div>
-                        <div class="col-md-3 isi_footer" style="margin-bottom: 3%;">
-                            <h5>Work hours</h5>
-                            <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
-                        </div>
-                        <div class="col-md-3 isi_footer" style="margin-bottom: 2%;">
-                            <h5>Contact</h5>
-                            <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
-                                <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
-                            </p>
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row align-items-center row_footer">
+                    <div class="col-md-3">
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.900066300759!2d113.84915147483633!3d-7.021031992980595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e70057ed749f%3A0x92004152aeafb8ed!2sHIGATRA%20PROPERTY!5e0!3m2!1sid!2sid!4v1726040814118!5m2!1sid!2sid"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                            </iframe>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col text-center social-icons">
-                            <i class="fab fa-facebook"></i>
-                            <i class="fab fa-youtube"></i>
-                            <i class="fab fa-instagram"></i>
-                            <i class="fab fa-tiktok"></i>
-                        </div>
+                    <div class="col-md-3 isi_footer" style="margin-top: 2%;">
+                        <h5>Address</h5>
+                        <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
+                            Kec.
+                            Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
+                    </div>
+                    <div class="col-md-3 isi_footer" style="margin-bottom: 3%;">
+                        <h5>Work hours</h5>
+                        <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
+                    </div>
+                    <div class="col-md-3 isi_footer" style="margin-bottom: 2%;">
+                        <h5>Contact</h5>
+                        <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
+                            <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center social-icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-youtube"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-tiktok"></i>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <!-- footer section -->
-        <?php include "layout/footer.html" ?>
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/index.js"></script>
+    <!-- footer section -->
+    <?php include "layout/footer.html" ?>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/index.js"></script>
 
 
-    </body>
+</body>
 
 </html>

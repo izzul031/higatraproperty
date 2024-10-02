@@ -33,21 +33,45 @@
 </head>
 
 <body>
-  <?php include "layout/navbar.html"; ?>
-  <div class="hero_area">
-    <div class="hero-slideshow"></div>
-    <section class="slider_section position-relative">
-      <div class="container">
-        <div class="col-lg-10 col-md-11 mx-auto">
-          <div class="detail-box">
-            <div class="detail-text">
-              <!-- Your existing content here -->
-            </div>
-          </div>
+  <?php include "layout/navbar2.html"; ?>
+  <section class="hero-section">
+    <div id="heroCarousel" class="carousel slide hero" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/sampul3.jpg" alt="Background Image 1">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/sampul/2.png" alt="Background Image 2">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/sampul/3.png" alt="Background Image 3">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/sampul/4.png" alt="Background Image 3">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/sampul/5.png" alt="Background Image 3">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/sampul/6.png" alt="Background Image 3">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/sampul/7.png" alt="Background Image 3">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/sampul/8.png" alt="Background Image 3">
+          <div class="hero-overlay"></div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
 
   <!-- end slider section -->

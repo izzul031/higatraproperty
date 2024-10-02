@@ -27,7 +27,7 @@
 
 <body>
 
-    <?php include "layout/navbar.html" ?>
+    <?php include "layout/navbar2.html" ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script>
         function toggleDropdown(event) {

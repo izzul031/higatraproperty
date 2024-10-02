@@ -27,7 +27,7 @@
 
 <body>
 
-    <?php include "layout/navbar.html" ?>
+    <?php include "layout/navbar2.html" ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script>
         function toggleDropdown(event) {
@@ -248,50 +248,50 @@
 
     <body>
         <?php
-include 'kon/koneksi.php';
-$hasil_jadi = mysqli_query($conn, "SELECT * FROM hasil_jadi");
-?>
+        include 'kon/koneksi.php';
+        $hasil_jadi = mysqli_query($conn, "SELECT * FROM hasil_jadi");
+        ?>
 
-<div class="container" style="margin-top: 100px;">
-    <h1>Hasil Jadi</h1>
-    <?php while ($row = mysqli_fetch_assoc($hasil_jadi)): ?>
-        <div class="card">
-            <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/hasil_jadi/<?= $row['gambar']; ?>" width="300" />
-            <div class="card-description">
-                <?= $row['deskripsi']; ?>
-            </div>
+        <div class="container" style="margin-top: 100px;">
+            <h1>Hasil Jadi</h1>
+            <?php while ($row = mysqli_fetch_assoc($hasil_jadi)): ?>
+                <div class="card">
+                    <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/hasil_jadi/<?= $row['gambar']; ?>" width="300" />
+                    <div class="card-description">
+                        <?= $row['deskripsi']; ?>
+                    </div>
+                </div>
+            <?php endwhile; ?>
         </div>
-    <?php endwhile; ?>
-</div>
 
-<div class="modal" id="myModal">
-    <span class="close" id="closeModal">&times;</span>
-    <img class="modal-content" id="img01" />
-</div>
+        <div class="modal" id="myModal">
+            <span class="close" id="closeModal">&times;</span>
+            <img class="modal-content" id="img01" />
+        </div>
 
-<script>
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("img01");
-    var closeModal = document.getElementById("closeModal");
+        <script>
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var closeModal = document.getElementById("closeModal");
 
-    document.querySelectorAll('.card img').forEach(img => {
-        img.onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-        }
-    });
+            document.querySelectorAll('.card img').forEach(img => {
+                img.onclick = function() {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+            });
 
-    closeModal.onclick = function() {
-        modal.style.display = "none";
-    }
+            closeModal.onclick = function() {
+                modal.style.display = "none";
+            }
 
-    // Close modal when clicking outside of the modal content
-    modal.onclick = function(event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
+            // Close modal when clicking outside of the modal content
+            modal.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
 
 
         <!-- alamat section  -->
