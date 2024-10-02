@@ -192,7 +192,7 @@
 
 <body>
 
-    <?php include "layout/navbar.html" ?>
+    <?php include "layout/navbar2.html" ?>
     <div class="container" style="margin-top: 100px;">
         <div class="header" style="margin-bottom: 20px;">
             Higatra Properti
