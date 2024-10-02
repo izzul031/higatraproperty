@@ -238,9 +238,6 @@
             </p>
         </div>
     </div>
-    <html>
-
-    <head>
 
         <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> -->
         <style>
@@ -251,12 +248,6 @@
                 padding: 0;
                 width: 100%;
             }
-
-            /* h1 {
-                font-size: 2em;
-                color: #333;
-                margin-top: 20px;
-            } */
 
             .container-2 {
                 display: flex;
@@ -378,7 +369,6 @@
                 }
             }
         </style>
-    </head>
 
     <?php
     include 'kon/koneksi.php';
@@ -452,14 +442,6 @@
         }
     </script>
 
-
-
-    <html>
-
-    <head>
-        <title>
-            Partners
-        </title>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
         <style>
             .partners {
@@ -591,7 +573,6 @@
                 /* Warna untuk YouTube */
             }
         </style>
-    </head>
 
     <!-- partner -->
     <section class="section_partner pb-5" style="background-color: #fff;">
@@ -614,15 +595,8 @@
     <body>
         <div class="section-3">
             <div class="container-3">
-
-
-
             </div>
 
-            <!-- <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
-                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i>
-                
-            </a> -->
 
             <div class="social-media-float">
                 <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">

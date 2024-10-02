@@ -20,5 +20,10 @@ body {
   background-color: #856a1e;
 }
 
-
+.form_register .btn-custom2 {
+  background-color: #aa8d3f;
+}
+.form_register .btn-custom2:hover {
+  background-color: #856a1e;
+}
 
