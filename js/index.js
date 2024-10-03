@@ -50,6 +50,8 @@ $('#heroCarousel').carousel({
     ride: 'carousel'
 });
 
+new WOW().init();
+
 
 
 
