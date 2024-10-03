@@ -67,14 +67,12 @@
                 width: 100%;
             }
 
-            .container {
+            .container-3 {
                 display: block;
                 gap: 20px;
                 width: 80%;
                 margin: 0 auto;
                 padding-top: 50px;
-                margin-top: 20px;
-                margin-bottom: 14px;
             }
 
             h1 {
@@ -246,7 +244,7 @@
     $bast = mysqli_query($conn, "SELECT * FROM bast");
     ?>
 
-    <div class="container" style="margin-top: 100px;">
+    <div class="container-3">
         <h1>BAST</h1>
         <h4>(Berita Acara Serah Terima)</h4>
         <?php while ($row = mysqli_fetch_assoc($bast)): ?>
@@ -291,7 +289,7 @@
 
     <!-- alamat section  -->
 
-    <footer>
+   <footer>
         <div class="footer">
             <div class="container">
                 <div class="row align-items-center row_footer">
@@ -303,17 +301,17 @@
                             </iframe>
                         </div>
                     </div>
-                    <div class="col-md-3 isi_footer" style="margin-top: 2%;">
+                    <div class="col-md-3 isi_footer" style="margin-top: 2%; text-align: justify;">
                         <h5>Address</h5>
                         <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
                             Kec.
                             Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
                     </div>
-                    <div class="col-md-3 isi_footer" style="margin-bottom: 3%;">
+                    <div class="col-md-3 isi_footer" style="margin-bottom: 3%; text-align: justify;">
                         <h5>Work hours</h5>
                         <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
                     </div>
-                    <div class="col-md-3 isi_footer" style="margin-bottom: 2%;">
+                    <div class="col-md-3 isi_footer" style="margin-bottom: 2%; text-align: justify;">
                         <h5>Contact</h5>
                         <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
                             <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
@@ -331,6 +329,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- footer section -->
     <?php include "layout/footer.html" ?>

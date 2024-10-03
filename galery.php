@@ -90,8 +90,6 @@
                 width: 80%;
                 margin: 0 auto;
                 padding-top: 50px;
-                margin-top: 20px;
-                margin-bottom: 14px;
             }
 
             h1 {
@@ -334,8 +332,8 @@
 
 
 
-        <div class="container" style="margin-top: 100px;">
-            <h1 style="text-align: center; margin-bottom: 40px;">Gambar 3D</h1>
+        <div class="container">
+            <h1 style="text-align: center;">Gambar 3D</h1>
             <div class="gallery-wrapper">
                 <?php foreach ($grouped_images as $client_name => $images): ?>
                     <div class="client-section">
@@ -421,18 +419,18 @@
                             </div>
                         </div>
                         <div class="col-md-3 isi_footer" style="margin-top: 2%;">
-                            <h5 style="text-align: left;">Address</h5>
-                            <p style="text-align: left;" class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
+                            <h5>Address</h5>
+                            <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
                                 Kec.
                                 Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
                         </div>
                         <div class="col-md-3 isi_footer" style="margin-bottom: 3%;">
-                            <h5 style="text-align: left;">Work hours</h5>
-                            <p style="text-align: left;" class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
+                            <h5>Work hours</h5>
+                            <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
                         </div>
                         <div class="col-md-3 isi_footer" style="margin-bottom: 2%;">
-                            <h5 style="text-align: left;">Contact</h5>
-                            <p style="text-align: left;" class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
+                            <h5>Contact</h5>
+                            <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
                                 <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
                             </p>
                         </div>
@@ -460,6 +458,7 @@
                 </div>
             </div>
         </footer>
+
 
         <!-- footer section -->
         <?php include "layout/footer.html" ?>
