@@ -67,7 +67,7 @@
                 width: 100%;
             }
 
-            .container {
+            .container-3 {
                 display: block;
                 gap: 20px;
                 width: 80%;
@@ -244,7 +244,7 @@
     $bast = mysqli_query($conn, "SELECT * FROM bast");
     ?>
 
-    <div class="container">
+    <div class="container-3">
         <h1>BAST</h1>
         <h4>(Berita Acara Serah Terima)</h4>
         <?php while ($row = mysqli_fetch_assoc($bast)): ?>
