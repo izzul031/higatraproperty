@@ -324,7 +324,7 @@
                 <div class="img-box">
                   <img src="images/icons/<?= $row['icon']; ?>" alt="" style="height: 100px;">
                 </div>
-                <div class="detail-box mt-4">
+                <div class="detail-box mt-4" style="color: #ffff;">
                   <h5>
                     <?= $row['description']; ?>
                   </h5>
