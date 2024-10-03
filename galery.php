@@ -90,8 +90,6 @@
                 width: 80%;
                 margin: 0 auto;
                 padding-top: 50px;
-                margin-top: 20px;
-                margin-bottom: 14px;
             }
 
             h1 {
@@ -321,8 +319,8 @@
 
 
 
-        <div class="container" style="margin-top: 100px;">
-            <h1 style="text-align: center; margin-bottom: 40px;">Gambar 3D</h1>
+        <div class="container">
+            <h1 style="text-align: center;">Gambar 3D</h1>
             <div class="gallery-wrapper">
                 <?php foreach ($grouped_images as $client_name => $images): ?>
                     <div class="client-section">

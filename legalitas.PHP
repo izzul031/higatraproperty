@@ -35,8 +35,6 @@
             margin: 0 auto;
             padding-top: 50px;
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 50px;
             /* background: #000; */
         }
 
@@ -193,8 +191,8 @@
 <body>
 
     <?php include "layout/navbar2.html" ?>
-    <div class="container" style="margin-top: 100px;">
-        <div class="header" style="margin-bottom: 20px;">
+    <div class="container">
+        <div class="header">
             Higatra Properti
         </div>
         <div class="content">

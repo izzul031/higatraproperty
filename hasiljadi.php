@@ -77,8 +77,6 @@
                 width: 80%;
                 margin: 0 auto;
                 padding-top: 50px;
-                margin-top: 20px;
-                margin-bottom: 14px;
             }
 
             h1 {
@@ -252,7 +250,7 @@
         $hasil_jadi = mysqli_query($conn, "SELECT * FROM hasil_jadi");
         ?>
 
-        <div class="container" style="margin-top: 100px;">
+        <div class="container">
             <h1>Hasil Jadi</h1>
             <?php while ($row = mysqli_fetch_assoc($hasil_jadi)): ?>
                 <div class="card">
