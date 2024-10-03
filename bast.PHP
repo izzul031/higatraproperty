@@ -289,7 +289,7 @@
 
     <!-- alamat section  -->
 
-    <footer>
+   <footer>
         <div class="footer">
             <div class="container">
                 <div class="row align-items-center row_footer">
@@ -301,17 +301,17 @@
                             </iframe>
                         </div>
                     </div>
-                    <div class="col-md-3 isi_footer" style="margin-top: 2%;">
+                    <div class="col-md-3 isi_footer" style="margin-top: 2%; text-align: justify;">
                         <h5>Address</h5>
                         <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
                             Kec.
                             Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
                     </div>
-                    <div class="col-md-3 isi_footer" style="margin-bottom: 3%;">
+                    <div class="col-md-3 isi_footer" style="margin-bottom: 3%; text-align: justify;">
                         <h5>Work hours</h5>
                         <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
                     </div>
-                    <div class="col-md-3 isi_footer" style="margin-bottom: 2%;">
+                    <div class="col-md-3 isi_footer" style="margin-bottom: 2%; text-align: justify;">
                         <h5>Contact</h5>
                         <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
                             <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
@@ -329,6 +329,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- footer section -->
     <?php include "layout/footer.html" ?>
