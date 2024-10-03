@@ -379,31 +379,32 @@
     $lkpd_result = mysqli_fetch_all(mysqli_query($conn, $lkpd_query), MYSQLI_ASSOC);
     ?>
 
-    <div class="section-2" style="background-color: #000;">
-        <h2 class="text-center" style="color:#b59a3b; margin-top: 20px; font-family: 'Poppins', sans-serif;">
+   <div class="section-2" style="background-color: #000; margin: 0; padding: 0; margin-bottom: 40px;">
+        <h2 class="text-center" style="color:#b59a3b; margin: 0 0 20px 0; font-family: 'Poppins', sans-serif;">
             LEGALITAS
         </h2>
-        <div class="row">
-            <div class="column">
-                <img src="images/Legalitas/potret1.jpg">
+        <div class="row" style="margin: 0; padding: 0;">
+            <div class="column" style="margin: 0; padding: 0;">
+                <img src="images/Legalitas/potret1.jpg" style="width: 100%; margin: 0; padding: 0;">
             </div>
-            <div class="column">
-                <img src="images/Legalitas/Picture23.jpg">
-                <img src="images/Legalitas/Picture13.jpg">
+            <div class="column" style="margin: 0; padding: 0;">
+                <img src="images/Legalitas/Picture23.jpg" style="width: 100%; margin: 0; padding: 0;">
+                <img src="images/Legalitas/Picture13.jpg" style="width: 100%; margin: 0; padding: 0;">
             </div>
-            <div class="column">
-                <img src="images/Legalitas/potret3.jpg">
+            <div class="column" style="margin: 0; padding: 0;">
+                <img src="images/Legalitas/potret3.jpg" style="width: 100%; margin: 0; padding: 0;">
             </div>
-            <div class="column">
-                <img src="images/Legalitas/Picture33.jpg">
-                <img src="images/Legalitas/Picture43.jpg">
+            <div class="column" style="margin: 0; padding: 0;">
+                <img src="images/Legalitas/Picture33.jpg" style="width: 100%; margin: 0; padding: 0;">
+                <img src="images/Legalitas/Picture43.jpg" style="width: 100%; margin: 0; padding: 0;">
             </div>
-            <div class="column">
-                <img src="images/Legalitas/potret2.jpg">
+            <div class="column" style="margin: 0; padding: 0;">
+                <img src="images/Legalitas/potret2.jpg" style="width: 100%; margin: 0; padding: 0;">
             </div>
         </div>
-
     </div>
+
+
 
     <script>
         const images = {

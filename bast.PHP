@@ -23,6 +23,10 @@
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
 
+</head>
+
+<body>
+
     <?php include "layout/navbar2.html" ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script>
@@ -58,7 +62,20 @@
     </script>
 
     <head>
-         <style>
+        <style>
+            .gallery-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                /* Center the images */
+            }
+
+            /* .card {
+                flex-basis: calc(10.333% - 20px);
+                margin: 10px;
+                box-sizing: border-box;
+            } */
+
             body {
                 background-color: #f4f4f4;
                 margin: 0;
@@ -82,9 +99,12 @@
             }
 
             .card {
+                flex-basis: calc(10.333% - 20px);
+
                 display: inline-block;
-                width: 310px;
-                margin: 400px;
+                width: 330px;
+                height: 410px;
+                margin: 1%;
                 background-color: #333;
                 border-radius: 10px;
                 overflow: hidden;
@@ -113,11 +133,11 @@
             }
 
             .card img {
-                /* position: relative; */
-                width: 400px;
-                height: 300px;
+                /* position: inline-block; */
+                width: 100%;
+                height: auto;
                 display: flex;
-                justify-content: center;
+                justify-self: center;
                 align-items: center;
                 /* aspect-ratio: 16 / 9; */
                 object-fit: cover;
@@ -225,7 +245,7 @@
             .modal-content {
                 display: block;
                 margin: auto;
-                max-width: 50%;
+                max-width: 70%;
                 max-height: 100%;
             }
 
@@ -237,59 +257,114 @@
                 font-size: 40px;
                 font-weight: bold;
             }
+
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: white;
+                font-weight: bold;
+                font-size: 40px;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            .prev {
+                left: 0;
+            }
+
+            .next {
+                right: 0;
+            }
+
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            @media (max-width: 768px) {
+                .card {
+                    flex-basis: calc(50% - 20px);
+                    /* 2 cards per row on smaller screens */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .card {
+                    flex-basis: calc(100% - 20px);
+                    /* 1 card per row on very small screens */
+                }
+            }
+
+            .footer .social-icons i {
+                font-size: 24px;
+                margin: 0 10px;
+                color: white;
+            }
+
+            .social-icons a {
+                font-size: 1.5em;
+                margin: 0 10px;
+                color: #ffffff;
+                text-decoration: none;
+            }
         </style>
     </head>
 
-<body>
-    <?php
-    include 'kon/koneksi.php';
-    $bast = mysqli_query($conn, "SELECT * FROM bast");
-    ?>
+    <body>
+       <?php
+            include 'kon/koneksi.php';
+            $bast = mysqli_query($conn, "SELECT * FROM bast");
+            ?>
 
-    <div class="container-3">
-        <h1>BAST</h1>
-        <h4>(Berita Acara Serah Terima)</h4>
-        <?php while ($row = mysqli_fetch_assoc($bast)): ?>
-            <div class="card">
-                <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/bast/<?= $row['gambar']; ?>" width="300" />
-                <div class="card-description">
-                    <?= $row['deskripsi']; ?>
-                </div>
+            <div class="container-3">
+                <h1>BAST</h1>
+                <h4>(Berita Acara Serah Terima)</h4>
+                <?php while ($row = mysqli_fetch_assoc($bast)): ?>
+                    <div class="card">
+                        <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/bast/<?= $row['gambar']; ?>" width="300" />
+                        <div class="card-description">
+                            <?= $row['deskripsi']; ?>
+                        </div>
+                    </div>
+                <?php endwhile; ?>
             </div>
-        <?php endwhile; ?>
-    </div>
 
-    <div class="modal" id="myModal">
-        <span class="close" id="closeModal">&times;</span>
-        <img class="modal-content" id="img01" />
-    </div>
+            <div class="modal" id="myModal">
+                <span class="close" id="closeModal">&times;</span>
+                <img class="modal-content" id="img01" />
+            </div>
 
-    <script>
-        var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("img01");
-        var closeModal = document.getElementById("closeModal");
+            <script>
+                var modal = document.getElementById("myModal");
+                var modalImg = document.getElementById("img01");
+                var closeModal = document.getElementById("closeModal");
 
-        document.querySelectorAll('.card img').forEach(img => {
-            img.onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            }
-        });
+                document.querySelectorAll('.card img').forEach(img => {
+                    img.onclick = function() {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                    }
+                });
 
-        closeModal.onclick = function() {
-            modal.style.display = "none";
-        }
+                closeModal.onclick = function() {
+                    modal.style.display = "none";
+                }
 
-        // Close modal when clicking outside of the modal content
-        modal.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
+                // Close modal when clicking outside of the modal content
+                modal.onclick = function(event) {
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            </script>
 
 
-    <!-- end partner -->
+        <!-- end partner -->
         <footer>
             <div class="footer">
             <div class="container">
@@ -347,6 +422,6 @@
         <script src="js/index.js"></script>
 
 
-</body>
+    </body>
 
 </html>
