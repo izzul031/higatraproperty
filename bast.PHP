@@ -58,7 +58,7 @@
     </script>
 
     <head>
-        <style>
+         <style>
             body {
                 background-color: #f4f4f4;
                 margin: 0;
@@ -84,7 +84,7 @@
             .card {
                 display: inline-block;
                 width: 310px;
-                /* margin: 1%; */
+                margin: 400px;
                 background-color: #333;
                 border-radius: 10px;
                 overflow: hidden;
@@ -114,11 +114,13 @@
 
             .card img {
                 /* position: relative; */
-                width: 100%;
-                height: 400px;
-                display: block;
+                width: 400px;
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 /* aspect-ratio: 16 / 9; */
-                /* object-fit: cover; */
+                object-fit: cover;
             }
 
             .card-button {
@@ -223,7 +225,7 @@
             .modal-content {
                 display: block;
                 margin: auto;
-                max-width: 30%;
+                max-width: 50%;
                 max-height: 100%;
             }
 
@@ -287,55 +289,62 @@
     </script>
 
 
-    <!-- alamat section  -->
-
-   <footer>
-        <div class="footer">
+    <!-- end partner -->
+        <footer>
+            <div class="footer">
             <div class="container">
                 <div class="row align-items-center row_footer">
-                    <div class="col-md-3">
-                        <div class="map">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.900066300759!2d113.84915147483633!3d-7.021031992980595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e70057ed749f%3A0x92004152aeafb8ed!2sHIGATRA%20PROPERTY!5e0!3m2!1sid!2sid!4v1726040814118!5m2!1sid!2sid"
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                            </iframe>
-                        </div>
+                <div class="col-md-3">
+                    <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.900066300759!2d113.84915147483633!3d-7.021031992980595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e70057ed749f%3A0x92004152aeafb8ed!2sHIGATRA%20PROPERTY!5e0!3m2!1sid!2sid!4v1726040814118!5m2!1sid!2sid"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
                     </div>
-                    <div class="col-md-3 isi_footer" style="margin-top: 2%; text-align: justify;">
-                        <h5>Address</h5>
-                        <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
-                            Kec.
-                            Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
-                    </div>
-                    <div class="col-md-3 isi_footer" style="margin-bottom: 3%; text-align: justify;">
-                        <h5>Work hours</h5>
-                        <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
-                    </div>
-                    <div class="col-md-3 isi_footer" style="margin-bottom: 2%; text-align: justify;">
-                        <h5>Contact</h5>
-                        <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
-                            <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
-                        </p>
-                    </div>
+                </div>
+                <div class="col-md-3 isi_footer" style="margin-top: 2%; text-align: justify;">
+                    <h5>Address</h5>
+                    <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
+                    Kec.
+                    Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
+                </div>
+                <div class="col-md-3 isi_footer" style="margin-bottom: 3%; text-align: justify;">
+                    <h5>Work hours</h5>
+                    <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
+                </div>
+                <div class="col-md-3 isi_footer" style="margin-bottom: 2%; text-align: justify;">
+                    <h5>Contact</h5>
+                    <p class="small"><i class="fas fa-envelope"></i> higatraapropertyy@gmail.com<br>
+                    <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
+                    </p>
+                </div>
                 </div>
                 <div class="row">
-                    <div class="col text-center social-icons">
-                        <i class="fab fa-facebook"></i>
-                        <i class="fab fa-youtube"></i>
-                        <i class="fab fa-instagram"></i>
-                        <i class="fab fa-tiktok"></i>
-                    </div>
+                <div class="col text-center social-icons">
+                    <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/higatra_property" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/username" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@HigatraProperty" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@higatraproperty" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
-
-    <!-- footer section -->
-    <?php include "layout/footer.html" ?>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/index.js"></script>
+            </div>
+        </footer>
+        <?php include "layout/footer.html" ?>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/index.js"></script>
 
 
 </body>
