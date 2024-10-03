@@ -30,6 +30,8 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
 
 <body>
@@ -117,7 +119,7 @@
   <section class="t_section layout_padding">
     <div class="container informasi">
       <div class="heading_container navy3 mb-5">
-        <h2>Layanan Kami</h2>
+        <h2 class="wow animate__animated animate__fadeInUp">Layanan Kami</h2>
       </div>
       <div class="row justify-content-center" style="margin-bottom: -100px;">
         <?php
@@ -125,7 +127,7 @@
         $query = "SELECT * FROM services";
         $result = mysqli_query($conn, $query);
         while ($row = mysqli_fetch_assoc($result)): ?>
-          <div class="col-6 col-sm-4 col-md-2 mb-5">
+          <div class="col-6 col-sm-4 col-md-2 mb-5 wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
             <a href="<?= $row['link']; ?>" class="service-link" target="_blank">
               <div class="service-icon">
                 <img src="images/services/<?= $row['image_url']; ?>" alt="<?= $row['description']; ?>">
@@ -136,11 +138,11 @@
         <?php endwhile; ?>
       </div>
     </div>
+
   </section>
 
 
   <!-- n inforrmasi dan layanan -->
-
   <!-- <div class="container-fluid cont-img">
         <div class="wrapper">
           <i id="left" class="fa-solid fa-angle-left"></i>
@@ -153,7 +155,6 @@
         </div>
       </div> -->
   <!-- tabel section -->
-
   <!-- <section class="us_section2 layout_padding">
     <div class="container tabel_harga">
       <div class="heading_container navy2 mb-5">
@@ -306,10 +307,13 @@
     </div>
 
   <!-- alasan memilih kami -->
+
+
+
   <section class="us_section layout_padding">
     <div class="container">
       <div class="heading_container navy">
-        <h2>ALASAN MEMILIH KAMI</h2>
+        <h2 class="wow animate__animated animate__fadeIn">ALASAN MEMILIH KAMI</h2>
       </div>
 
       <div class="us_container">
@@ -319,7 +323,7 @@
           $query = "SELECT * FROM reasons";
           $result = mysqli_query($conn, $query);
           while ($row = mysqli_fetch_assoc($result)): ?>
-            <div class="col-lg-4 col-md-6 text-center mt-5">
+            <div class="col-lg-4 col-md-6 text-center mt-5 wow animate__animated animate__fadeIn">
               <div class="box">
                 <div class="img-box">
                   <img src="images/icons/<?= $row['icon']; ?>" alt="" style="height: 100px;">
@@ -346,14 +350,14 @@
   <section class="trainer_section layout_padding">
     <div class="container karyawan">
       <div class="heading_container navy4">
-        <h2>Karyawan</h2>
+        <h2 class="wow animate__animated animate__fadeInUp">Karyawan</h2>
       </div>
       <div id="trainerCarousel" class="carousel slide" data-ride="carousel">
-        <a class="carousel-control-prev c_prev" href="#trainerCarousel" role="button" data-slide="prev">
+        <a class="carousel-control-prev c_prev wow animate__animated animate__fadeInUp" href="#trainerCarousel" role="button" data-slide="prev">
           <i class="fas fa-chevron-left"></i>
           <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next c_next" href="#trainerCarousel" role="button" data-slide="next">
+        <a class="carousel-control-next c_next wow animate__animated animate__fadeInUp" href="#trainerCarousel" role="button" data-slide="next">
           <i class="fas fa-chevron-right"></i>
           <span class="sr-only">Next</span>
         </a>
@@ -369,7 +373,7 @@
                 <div class="row">
                 <?php endif; ?>
 
-                <div class="col-lg-4 col-md-6 mx-auto">
+                <div class="col-lg-4 col-md-6 mx-auto wow animate__animated animate__fadeInUp">
                   <div class="box">
                     <div class="img-box">
                       <img src="images/karyawan/<?= $row['gambar']; ?>" alt="">
@@ -448,9 +452,8 @@
   <section class="testi-section">
     <div class="container-fluid testimonial-section">
       <div class="container">
-
         <div class="heading_container navy5" style="color: #AA8D3F;">
-          <h2>TESTIMONI</h2>
+          <h2 class="wow animate__animated animate__fadeInUp">TESTIMONI</h2>
         </div>
 
         <!-- Carousel Wrapper -->
@@ -482,7 +485,7 @@
                   <div class="row mt-5">
                   <?php endif; ?>
 
-                  <div class="col-lg-6 col-md-6 mb-4">
+                  <div class="col-lg-6 col-md-6 mb-4 wow animate__animated animate__fadeInUp">
                     <div class="testimonial-item d-flex align-items-center">
                       <div class="quote-icon">
                         <i class="fa fa-quote-left"></i>
@@ -527,7 +530,7 @@
   <!-- partner -->
   <section class="section_partner pb-5">
     <div class="heading_container navy3 mb-2 ">
-      <h2>Our Partners</h2>
+      <h2 class="wow animate__animated animate__fadeInUp">Our Partners</h2>
     </div>
     <div class="slider slider_partner">
       <div class="slider-items slider-items_partner">
@@ -626,6 +629,7 @@
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/carousel.js"></script>
   <script src="js/index.js"></script>
