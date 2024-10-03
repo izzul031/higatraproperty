@@ -324,7 +324,7 @@
                 <div class="img-box">
                   <img src="images/icons/<?= $row['icon']; ?>" alt="" style="height: 100px;">
                 </div>
-                <div class="detail-box mt-4">
+                <div class="detail-box mt-4" style="color: #ffff;">
                   <h5>
                     <?= $row['description']; ?>
                   </h5>
@@ -477,12 +477,12 @@
             $count = 0;
             while ($row = mysqli_fetch_assoc($result)):
             ?>
-              <?php if ($count % 3 == 0): ?>
+              <?php if ($count % 2 == 0): ?>
                 <div class="carousel-item <?= $count == 0 ? 'active' : ''; ?>">
                   <div class="row mt-5">
                   <?php endif; ?>
 
-                  <div class="col-lg-4 col-md-6 mb-4">
+                  <div class="col-lg-6 col-md-6 mb-4">
                     <div class="testimonial-item d-flex align-items-center">
                       <div class="quote-icon">
                         <i class="fa fa-quote-left"></i>
@@ -495,13 +495,13 @@
                       <div class="testimonial-right">
 
                         <p class="deskripsi">"<?= $row['deskripsi']; ?>"</p>
-                        <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-dark mt-3">Detail</a>
+                        <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-dark mt-3 btn-detail" style="align-self: center;">Detail</a>
                       </div>
                     </div>
                   </div>
 
 
-                  <?php if ($count % 3 == 2): ?>
+                  <?php if ($count % 2 == 1): ?>
                   </div>
                 </div>
               <?php endif; ?>
@@ -510,7 +510,7 @@
             endwhile;
             ?>
 
-            <?php if ($count % 3 != 0): ?>
+            <?php if ($count % 2 != 0): ?>
           </div>
         </div>
       <?php endif; ?>
