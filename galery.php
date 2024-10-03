@@ -301,6 +301,19 @@
                     /* 1 card per row on very small screens */
                 }
             }
+
+            .footer .social-icons i {
+                font-size: 24px;
+                margin: 0 10px;
+                color: white;
+            }
+
+            .social-icons a {
+                font-size: 1.5em;
+                margin: 0 10px;
+                color: #ffffff;
+                text-decoration: none;
+            }
         </style>
     </head>
 
@@ -408,28 +421,40 @@
                             </div>
                         </div>
                         <div class="col-md-3 isi_footer" style="margin-top: 2%;">
-                            <h5>Address</h5>
-                            <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
+                            <h5 style="text-align: left;">Address</h5>
+                            <p style="text-align: left;" class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
                                 Kec.
                                 Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
                         </div>
                         <div class="col-md-3 isi_footer" style="margin-bottom: 3%;">
-                            <h5>Work hours</h5>
-                            <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
+                            <h5 style="text-align: left;">Work hours</h5>
+                            <p style="text-align: left;" class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
                         </div>
                         <div class="col-md-3 isi_footer" style="margin-bottom: 2%;">
-                            <h5>Contact</h5>
-                            <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
+                            <h5 style="text-align: left;">Contact</h5>
+                            <p style="text-align: left;" class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
                                 <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
                             </p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col text-center social-icons">
-                            <i class="fab fa-facebook"></i>
-                            <i class="fab fa-youtube"></i>
-                            <i class="fab fa-instagram"></i>
-                            <i class="fab fa-tiktok"></i>
+                        <div class="col text-center social-icons" style="margin: 20px 0;
+            margin-top: auto;">
+                            <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.instagram.com/higatra_property" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/username" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@HigatraProperty" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@higatraproperty" target="_blank">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
