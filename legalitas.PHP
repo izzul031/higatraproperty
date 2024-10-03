@@ -605,7 +605,7 @@
                 <a href="https://www.instagram.com/higatra_property" target="_blank" class="instagram-float">
                     <i class="fab fa-instagram"></i>
                 </a>
-                <a href="https://www.facebook.com/username" target="_blank" class="facebook-float">
+                <a href="https://www.facebook.com/@Higatra Property Official" target="_blank" class="facebook-float">
                     <i class="fab fa-facebook"></i>
                 </a>
                 <a href="https://www.youtube.com/@HigatraProperty" target="_blank" class="youtube-float">
@@ -615,7 +615,7 @@
                     <i class="fab fa-tiktok"></i>
                 </a>
             </div>
-
+        </div>
 
 
             <footer>
