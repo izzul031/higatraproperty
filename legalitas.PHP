@@ -121,9 +121,9 @@
             margin-right: 10px;
         }
 
-        .footer {
+        /* .footer {
             margin-bottom: auto;
-        }
+        } */
 
         .section {
             padding: 20px 0;
@@ -237,136 +237,136 @@
         </div>
     </div>
 
-        <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> -->
-        <style>
-            body {
-                text-align: center;
-                background-color: #000;
-                margin: 0;
-                padding: 0;
-                width: 100%;
-            }
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> -->
+    <style>
+        body {
+            text-align: center;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
 
-            .container-2 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-top: 20px;
-                margin-bottom: 2px;
-            }
+        .container-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 2px;
+        }
 
-            .report {
-                position: relative;
-                margin: 0 80px;
-                /* Increased margin for more spacing */
-                text-align: center;
-            }
+        .report {
+            position: relative;
+            margin: 0 80px;
+            /* Increased margin for more spacing */
+            text-align: center;
+        }
 
-            .report img {
-                width: 300px;
-                height: 400px;
-                border: 1px solid #ddd;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
+        .report img {
+            width: 300px;
+            height: 400px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-            .report-title {
-                font-size: 12px;
-                color: #fff;
-                margin-top: 10px;
-            }
+        .report-title {
+            font-size: 12px;
+            color: #fff;
+            margin-top: 10px;
+        }
 
-            .report-2 {
-                position: relative;
-                margin: 0 80px;
-                /* Increased margin for more spacing */
-                text-align: center;
-            }
+        .report-2 {
+            position: relative;
+            margin: 0 80px;
+            /* Increased margin for more spacing */
+            text-align: center;
+        }
 
-            .report-2 img {
-                width: 400px;
-                height: 300px;
-                border: 1px solid #ddd;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            }
+        .report-2 img {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-            .report-2-title {
-                font-size: 5px;
-                color: #333;
-                margin-top: 10px;
-            }
+        .report-2-title {
+            font-size: 5px;
+            color: #333;
+            margin-top: 10px;
+        }
 
-            .nav-arrows {
-                position: absolute;
-                top: 50%;
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                transform: translateY(-50%);
-                border-width: 0 3px 3px 0;
-            }
+        .nav-arrows {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            border-width: 0 3px 3px 0;
+        }
 
-            .nav-arrows i {
-                font-size: 2em;
-                color: #f7ef8a;
-                cursor: pointer;
-                background-color: #333;
-                border-radius: 50%;
-                padding: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                transition: background-color 0.3s, color 0.3s;
-            }
+        .nav-arrows i {
+            font-size: 2em;
+            color: #f7ef8a;
+            cursor: pointer;
+            background-color: #333;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-            .nav-arrows i:hover {
-                background-color: #0056b3;
-                color: #fff;
-            }
+        .nav-arrows i:hover {
+            background-color: #0056b3;
+            color: #fff;
+        }
 
-            .nav-left {
-                position: absolute;
-                left: -60px;
-            }
+        .nav-left {
+            position: absolute;
+            left: -60px;
+        }
 
-            .nav-right {
-                position: absolute;
-                right: -60px;
-            }
+        .nav-right {
+            position: absolute;
+            right: -60px;
+        }
 
-            .row {
-                display: flex;
-                flex-wrap: wrap;
-                padding: 0 4px;
-            }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
 
-            /* Create four equal columns that sits next to each other */
+        /* Create four equal columns that sits next to each other */
+        .column {
+            flex: 15%;
+            /* max-width: 15%; */
+            /* padding: 0 4px; */
+        }
+
+        .column img {
+            margin-top: 20px;
+            /* vertical-align: middle; */
+            width: 95%;
+            justify-content: center;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
             .column {
-                flex: 15%;
-                /* max-width: 15%; */
-                /* padding: 0 4px; */
+                flex: 50%;
+                max-width: 50%;
             }
+        }
 
-            .column img {
-                margin-top: 20px;
-                /* vertical-align: middle; */
-                width: 95%;
-                justify-content: center;
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
             }
-
-            /* Responsive layout - makes a two column-layout instead of four columns */
-            @media screen and (max-width: 800px) {
-                .column {
-                    flex: 50%;
-                    max-width: 50%;
-                }
-            }
-
-            /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-            @media screen and (max-width: 600px) {
-                .column {
-                    flex: 100%;
-                    max-width: 100%;
-                }
-            }
-        </style>
+        }
+    </style>
 
     <?php
     include 'kon/koneksi.php';
@@ -440,64 +440,64 @@
         }
     </script>
 
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <style>
-            .partners {
-                font-size: 2em;
-                font-weight: bold;
-                color: #1a1a1a;
-                margin-top: 20px;
-            }
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        .partners {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-top: 20px;
+        }
 
-            .logos {
-                margin: 20px 0;
-            }
+        .logos {
+            margin: 20px 0;
+        }
 
-            .logos img {
-                margin: 0 20px;
-                height: 100px;
-            }
+        .logos img {
+            margin: 0 20px;
+            height: 100px;
+        }
 
-            .description {
-                font-size: 1.2em;
-                margin: 40px auto;
-                width: 80%;
-                color: #fff;
-            }
+        .description {
+            font-size: 1.2em;
+            margin: 40px auto;
+            width: 80%;
+            color: #fff;
+        }
 
-            .contact-button {
-                background-color: #d4af37;
-                color: #ffffff;
-                padding: 15px 30px;
-                border: none;
-                border-radius: 5px;
-                font-size: 1.2em;
-                cursor: pointer;
-                margin: 20px auto;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: fit-content;
-            }
+        .contact-button {
+            background-color: #d4af37;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+        }
 
-            .contact-button i {
-                margin-right: 10px;
-            }
+        .contact-button i {
+            margin-right: 10px;
+        }
 
-            .social-icons {
-                margin: 20px 0;
-                margin-top: auto;
-            }
+        .social-icons {
+            margin: 20px 0;
+            margin-top: auto;
+        }
 
-            .social-icons a {
-                font-size: 1.5em;
-                margin: 0 10px;
-                color: #ffffff;
-                text-decoration: none;
-            }
+        .social-icons a {
+            font-size: 1.5em;
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
 
-            /* .whatsapp-float {
+        /* .whatsapp-float {
                 position: fixed;
                 bottom: 20px;
                 right: 20px;
@@ -516,61 +516,67 @@
                 margin-right: 10px;
             } */
 
-            */ .social-media-float {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                display: flex;
-                flex-direction: row;
-                /* Tetap horizontal */
-                gap: 10px;
-                /* Jarak antar ikon */
-                z-index: 1000;
-            }
+        */ .social-media-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: row;
+            /* Tetap horizontal */
+            gap: 10px;
+            /* Jarak antar ikon */
+            z-index: 1000;
+        }
 
-            .whatsapp-float,
-            .instagram-float,
-            .facebook-float,
-            .youtube-float {
-                background-color: #25d366;
-                /* Default warna hijau WhatsApp */
-                color: #ffffff;
-                width: 50px;
-                /* Ukuran kotak */
-                height: 50px;
-                /* Ukuran kotak */
-                border-radius: 10%;
-                /* Membuat bentuk lingkaran */
-                display: flex;
-                justify-content: center;
-                /* Posisikan ikon di tengah secara horizontal */
-                align-items: center;
-                /* Posisikan ikon di tengah secara vertikal */
-                font-size: 24px;
-                /* Ukuran ikon */
-                cursor: pointer;
-            }
+        .whatsapp-float,
+        .instagram-float,
+        .facebook-float,
+        .youtube-float {
+            background-color: #25d366;
+            /* Default warna hijau WhatsApp */
+            color: #ffffff;
+            width: 50px;
+            /* Ukuran kotak */
+            height: 50px;
+            /* Ukuran kotak */
+            border-radius: 10%;
+            /* Membuat bentuk lingkaran */
+            display: flex;
+            justify-content: center;
+            /* Posisikan ikon di tengah secara horizontal */
+            align-items: center;
+            /* Posisikan ikon di tengah secara vertikal */
+            font-size: 24px;
+            /* Ukuran ikon */
+            cursor: pointer;
+        }
 
-            .whatsapp-float {
-                background-color: #25d366;
-                /* Warna untuk WhatsApp */
-            }
+        .whatsapp-float {
+            background-color: #25d366;
+            /* Warna untuk WhatsApp */
+        }
 
-            .instagram-float {
-                background-color: #E1306C;
-                /* Warna untuk Instagram */
-            }
+        .instagram-float {
+            background-color: #E1306C;
+            /* Warna untuk Instagram */
+        }
 
-            .facebook-float {
-                background-color: #3b5998;
-                /* Warna untuk Facebook */
-            }
+        .facebook-float {
+            background-color: #3b5998;
+            /* Warna untuk Facebook */
+        }
 
-            .youtube-float {
-                background-color: #FF0000;
-                /* Warna untuk YouTube */
-            }
-        </style>
+        .youtube-float {
+            background-color: #FF0000;
+            /* Warna untuk YouTube */
+        }
+
+        .footer .social-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            color: white;
+        }
+    </style>
 
     <!-- partner -->
     <section class="section_partner pb-5" style="background-color: #fff;">
@@ -592,10 +598,6 @@
 
     <body>
         <div class="section-3">
-            <div class="container-3">
-            </div>
-
-
             <div class="social-media-float">
                 <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank" class="whatsapp-float">
                     <i class="fab fa-whatsapp"></i>
@@ -616,61 +618,60 @@
         </div>
 
 
-            <footer>
-    <div class="footer">
-        <div class="container">
-            <div class="row align-items-center row_footer">
-                <div class="col-md-3">
-                    <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.900066300759!2d113.84915147483633!3d-7.021031992980595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e70057ed749f%3A0x92004152aeafb8ed!2sHIGATRA%20PROPERTY!5e0!3m2!1sid!2sid!4v1726040814118!5m2!1sid!2sid"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                        </iframe>
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="row align-items-center row_footer">
+                        <div class="col-md-3">
+                            <div class="map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.900066300759!2d113.84915147483633!3d-7.021031992980595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e70057ed749f%3A0x92004152aeafb8ed!2sHIGATRA%20PROPERTY!5e0!3m2!1sid!2sid!4v1726040814118!5m2!1sid!2sid"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-3 isi_footer" style="margin-top: 2%;">
+                            <h5>Address</h5>
+                            <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
+                                Kec.
+                                Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
+                        </div>
+                        <div class="col-md-3 isi_footer" style="margin-bottom: 3%;">
+                            <h5>Work hours</h5>
+                            <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
+                        </div>
+                        <div class="col-md-3 isi_footer" style="margin-bottom: 2%;">
+                            <h5>Contact</h5>
+                            <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
+                                <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center social-icons">
+                            <i class="fab fa-facebook"></i>
+                            <i class="fab fa-youtube"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-tiktok"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 isi_footer" style="margin-top: 2%; text-align: justify;">
-                    <h5>Address</h5>
-                    <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
-                        Kec.
-                        Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
-                </div>
-                <div class="col-md-3 isi_footer" style="margin-bottom: 3%; text-align: justify;">
-                    <h5>Work hours</h5>
-                    <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
-                </div>
-                <div class="col-md-3 isi_footer" style="margin-bottom: 2%; text-align: justify;">
-                    <h5>Contact</h5>
-                    <p class="small"><i class="fas fa-envelope"></i> higatrapropertyv@gmail.com<br>
-                        <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
-                    </p>
-                </div>
             </div>
-            <div class="row">
-                <div class="col text-center social-icons">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-tiktok"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+        </footer>
 
-
-            <!-- footer section -->
-            <?php include "layout/footer.html" ?>
+        <!-- footer section -->
+        <?php include "layout/footer.html" ?>
 
 
 
-            <!-- footer section -->
+        <!-- footer section -->
 
-            <script src="js/jquery-3.4.1.min.js"></script>
-            <script src="js/bootstrap.js"></script>
-            <script src="js/carousel.js"></script>
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/carousel.js"></script>
 
-            <script src="js/index.js"></script>
+        <script src="js/index.js"></script>
 
     </body>
 
-    </html>
+</html>

@@ -598,10 +598,21 @@
         </div>
         <div class="row">
           <div class="col text-center social-icons">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-youtube"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-tiktok"></i>
+            <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/higatra_property" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/username" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/@HigatraProperty" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@higatraproperty" target="_blank">
+              <i class="fab fa-tiktok"></i>
+            </a>
           </div>
         </div>
       </div>
