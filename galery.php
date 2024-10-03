@@ -22,6 +22,8 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
 </head>
 
@@ -312,44 +314,68 @@
                 color: #ffffff;
                 text-decoration: none;
             }
+
+            .gallery-wrapper .card {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 1s ease-out, transform 1s ease-out;
+            }
+
+            .gallery-wrapper .card.show {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* Gaya awal untuk card */
+            .card {
+                opacity: 0; /* Tidak terlihat pada awalnya */
+                transform: translateY(20px); /* Bergeser ke bawah */
+                transition: opacity 0.6s ease, transform 0.6s ease; /* Transisi saat muncul */
+            }
+
+            /* Gaya untuk card saat terlihat */
+            .card.show {
+                opacity: 1; /* Menjadi terlihat */
+                transform: translateY(0); /* Kembali ke posisi normal */
+            }
         </style>
     </head>
 
     <body>
         <?php
-        include 'kon/koneksi.php';
-        $query = "SELECT g.id, t.nama AS nama_klien, g.gambar, g.deskripsi 
-          FROM gambar_3d g
-          JOIN testimonials t ON g.id_klien = t.id
-          ORDER BY t.nama, g.id";
-        $result = mysqli_query($conn, $query);
+            include 'kon/koneksi.php';
+            $query = "SELECT g.id, t.nama AS nama_klien, g.gambar, g.deskripsi 
+                    FROM gambar_3d g
+                    JOIN testimonials t ON g.id_klien = t.id
+                    ORDER BY t.nama, g.id";
+            $result = mysqli_query($conn, $query);
 
-        $grouped_images = [];
-        while ($row = mysqli_fetch_assoc($result)) {
-            $grouped_images[$row['nama_klien']][] = $row;
-        }
-        ?>
+            $grouped_images = [];
+            while ($row = mysqli_fetch_assoc($result)) {
+                $grouped_images[$row['nama_klien']][] = $row;
+            }
+            ?>
 
-
-
-        <div class="container-3">
-            <h1 style="text-align: center;">Gambar 3D</h1>
-            <div class="gallery-wrapper">
-                <?php foreach ($grouped_images as $client_name => $images): ?>
-                    <div class="client-section">
-                        <!-- <h2 class="client-name"><?= htmlspecialchars($client_name) ?></h2> -->
-                        <div class="card">
-                            <img alt="<?= htmlspecialchars($images[0]['deskripsi']); ?>"
-                                src="images/gambar_3d/<?= htmlspecialchars($images[0]['gambar']); ?>"
-                                data-client="<?= htmlspecialchars($client_name) ?>" />
-                            <div class="card-description">
-                                <?= htmlspecialchars($images[0]['deskripsi']); ?>
+            <div class="container-3">
+                <h1 class="animate__animated animate__fadeIn" style="text-align: center;">Gambar 3D</h1>
+                <div class="gallery-wrapper">
+                    <?php foreach ($grouped_images as $client_name => $images): ?>
+                        <div class="client-section">
+                            <div class="card"> <!-- Pastikan card memiliki kelas 'card' -->
+                                <img alt="<?= htmlspecialchars($images[0]['deskripsi']); ?>"
+                                    src="images/gambar_3d/<?= htmlspecialchars($images[0]['gambar']); ?>"
+                                    data-client="<?= htmlspecialchars($client_name) ?>" />
+                                <div class="card-description">
+                                    <?= htmlspecialchars($images[0]['deskripsi']); ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </div>
             </div>
-        </div>
+
+
+
 
         <div class="modal" id="myModal">
             <span class="close" id="closeModal">&times;</span>
@@ -357,6 +383,29 @@
             <a class="prev" id="prevSlide">&#10094;</a>
             <a class="next" id="nextSlide">&#10095;</a>
         </div>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const cards = document.querySelectorAll('.card');
+
+                // Membuat observer
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('show'); // Tambahkan kelas show
+                        }
+                    });
+                }, { threshold: 0.1 }); // Mulai animasi ketika 10% elemen terlihat
+
+                // Menerapkan observer ke setiap card
+                cards.forEach(card => {
+                    observer.observe(card);
+                });
+            });
+        </script>
+
+
+
 
         <script>
             var modal = document.getElementById("myModal");

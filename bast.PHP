@@ -312,6 +312,32 @@
                 color: #ffffff;
                 text-decoration: none;
             }
+
+             /* Awal kondisi card tersembunyi */
+            .card {
+                opacity: 0;  /* Tidak terlihat pada awalnya */
+                transform: translateY(20px);  /* Bergeser sedikit ke bawah */
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;  /* Transisi saat muncul */
+            }
+
+            /* Ketika elemen card terlihat */
+            .card.show {
+                opacity: 1;  /* Menjadi terlihat */
+                transform: translateY(0);  /* Kembali ke posisi normal */
+            }
+
+            /* Gambar dalam card juga mendapatkan efek */
+            .card img {
+                opacity: 0;  /* Gambar tidak terlihat pada awalnya */
+                transform: scale(0.9);  /* Sedikit mengecil */
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;  /* Transisi saat muncul */
+            }
+
+            /* Ketika gambar terlihat */
+            .card.show img {
+                opacity: 1;  /* Menjadi terlihat */
+                transform: scale(1);  /* Kembali ke ukuran normal */
+            }
         </style>
     </head>
 
@@ -326,18 +352,38 @@
                 <h4>(Berita Acara Serah Terima)</h4>
                 <?php while ($row = mysqli_fetch_assoc($bast)): ?>
                     <div class="card">
-                        <img alt="<?= $row['deskripsi']; ?>" height="300" src="images/bast/<?= $row['gambar']; ?>" width="300" />
+                        <img alt="<?= htmlspecialchars($row['deskripsi']); ?>" height="300" src="images/bast/<?= htmlspecialchars($row['gambar']); ?>" width="300" />
                         <div class="card-description">
-                            <?= $row['deskripsi']; ?>
+                            <?= htmlspecialchars($row['deskripsi']); ?>
                         </div>
                     </div>
                 <?php endwhile; ?>
             </div>
 
+
             <div class="modal" id="myModal">
                 <span class="close" id="closeModal">&times;</span>
                 <img class="modal-content" id="img01" />
             </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const cards = document.querySelectorAll('.card');
+                    
+                    // Membuat observer
+                    const observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('show');  // Tambahkan kelas show
+                            }
+                        });
+                    }, { threshold: 0.1 });  // Mulai animasi ketika 10% card terlihat
+
+                    // Menerapkan observer ke setiap elemen card
+                    cards.forEach(card => observer.observe(card));
+                });
+            </script>
+
 
             <script>
                 var modal = document.getElementById("myModal");

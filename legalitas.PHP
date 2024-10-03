@@ -185,6 +185,17 @@
                 font-size: 18px;
             }
         }
+
+        .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
@@ -192,10 +203,10 @@
 
     <?php include "layout/navbar2.html" ?>
     <div class="container">
-        <div class="header">
+        <div class="header fade-in">
             Higatra Properti
         </div>
-        <div class="content">
+        <div class="content fade-in">
             <p style="text-align: justify; color:#fff">
                 <b style="color: #AA8D3F;">Higatra Property</b> adalah perusahaan kontruksi yang didirikan pada <b style="color: #AA8D3F;">tahun 2017</b> oleh <b style="color: #AA8D3F;">Eko
                     Heri Supriyanto.</b> Berawal dari keresahan, Higatra hadir di Masyarakat dengan <b style="color: #AA8D3F;">harga bangun
@@ -213,7 +224,7 @@
         </div>
     </div>
     <div class="section">
-        <div class="container-3">
+        <div class="container fade-in">
             <h2 class="text-center" style="color: #AA8D3F;">
                 Visi
             </h2>
@@ -225,7 +236,7 @@
         </div>
     </div>
     <div class="section">
-        <div class="container-3">
+        <div class="container fade-in">
             <h2 class="text-center" style="color: #AA8D3F;">
                 Misi
             </h2>
@@ -236,6 +247,23 @@
             </p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            });
+
+            elements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+
 
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /> -->
     <style>
@@ -366,6 +394,16 @@
                 max-width: 100%;
             }
         }
+        .fade-in-image {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in-image.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 
     <?php
@@ -385,24 +423,41 @@
         </h2>
         <div class="row" style="margin: 0; padding: 0;">
             <div class="column" style="margin: 0; padding: 0;">
-                <img src="images/Legalitas/potret1.jpg" style="width: 100%; margin: 0; padding: 0;">
+                <img src="images/Legalitas/potret1.jpg" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
             </div>
             <div class="column" style="margin: 0; padding: 0;">
-                <img src="images/Legalitas/Picture23.jpg" style="width: 100%; margin: 0; padding: 0;">
-                <img src="images/Legalitas/Picture13.jpg" style="width: 100%; margin: 0; padding: 0;">
+                <img src="images/Legalitas/Picture23.jpg" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
+                <img src="images/Legalitas/Picture13.jpg" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
             </div>
             <div class="column" style="margin: 0; padding: 0;">
-                <img src="images/Legalitas/potret3.jpg" style="width: 100%; margin: 0; padding: 0;">
+                <img src="images/Legalitas/potret3.jpg" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
             </div>
             <div class="column" style="margin: 0; padding: 0;">
-                <img src="images/Legalitas/Picture33.jpg" style="width: 100%; margin: 0; padding: 0;">
-                <img src="images/Legalitas/Picture43.jpg" style="width: 100%; margin: 0; padding: 0;">
+                <img src="images/Legalitas/Picture33.jpg" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
+                <img src="images/Legalitas/Picture43.jpg" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
             </div>
             <div class="column" style="margin: 0; padding: 0;">
-                <img src="images/Legalitas/potret2.jpg" style="width: 100%; margin: 0; padding: 0;">
+                <img src="images/Legalitas/potret2.jpg" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll('.fade-in-image');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            });
+
+            images.forEach(img => observer.observe(img));
+        });
+    </script>
+
+
 
 
 
