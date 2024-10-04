@@ -101,7 +101,7 @@
                         Tentang Kami
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="legalitasDropdown">
-                        <li><a class="dropdown-item" href="../reports/">Legalitas</a></li>
+                        <li><a class="dropdown-item" href="../legalitas/">Legalitas</a></li>
                     </ul>
                 </div>
 

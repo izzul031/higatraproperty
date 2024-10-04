@@ -498,7 +498,7 @@
                       <div class="testimonial-right">
 
                         <p class="deskripsi">"<?= $row['deskripsi']; ?>"</p>
-                        <a href="detail.php?id=<?= $row['id']; ?>" class="btn btn-dark mt-3 btn-detail" style="align-self: center;">Detail</a>
+                        <a href="detail?id=<?= $row['id']; ?>" class="btn btn-dark mt-3 btn-detail" style="align-self: center;">Detail</a>
                       </div>
                     </div>
                   </div>
