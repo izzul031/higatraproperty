@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
             if (password_verify($password, $storedPassword)) {
                 $_SESSION['name'] = $name;
                 $_SESSION['username'] = $username;
-                header('location:welcome.php');
+                header('location:admin/welcome/');
             } else {
                 echo "<script>alert('Invalid Username or Password');</script>";
                 exit;
