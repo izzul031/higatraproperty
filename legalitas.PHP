@@ -460,7 +460,7 @@
         }
         ?>
 
-        <div class="row" style="margin: 0; padding: 0;">
+        <div class="row" style="margin: 6; padding: 0;">
             <?php
             $totalPortrait = count($portraitImages);
             $totalLandscape = count($landscapeImages);
@@ -469,19 +469,19 @@
 
             while ($i < $totalPortrait || $j < $totalLandscape) {
                 if ($i < $totalPortrait) { ?>
-                    <div class="column" style="margin: 0; padding: 0;">
-                        <img src="<?php echo $basePath . $portraitImages[$i]; ?>" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
+                    <div class="column" style="margin: 6; padding: 0;">
+                        <img src="<?php echo $basePath . $portraitImages[$i]; ?>" class="fade-in-image" style="width: 100%; margin: 6; padding: 0;">
                     </div>
                 <?php
                     $i++;
                 }
 
                 if ($j < $totalLandscape) { ?>
-                    <div class="column" style="margin: 0; padding: 0;">
-                        <img src="<?php echo $basePath . $landscapeImages[$j]; ?>" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
+                    <div class="column" style="margin: 5; padding: 0;">
+                        <img src="<?php echo $basePath . $landscapeImages[$j]; ?>" class="fade-in-image" style="width: 100%; margin: 5; padding: 0;">
                         <?php
                         if ($j + 1 < $totalLandscape) { ?>
-                            <img src="<?php echo $basePath . $landscapeImages[$j + 1]; ?>" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
+                            <img src="<?php echo $basePath . $landscapeImages[$j + 1]; ?>" class="fade-in-image" style="width: 100%; margin: 5; padding: 0;">
                         <?php
                             $j++;
                         } ?>
