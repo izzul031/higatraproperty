@@ -187,9 +187,9 @@
         }
 
         .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
         }
 
         .fade-in.show {
@@ -394,10 +394,11 @@
                 max-width: 100%;
             }
         }
+
         .fade-in-image {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
         }
 
         .fade-in-image.show {
@@ -417,11 +418,11 @@
     $lkpd_result = mysqli_fetch_all(mysqli_query($conn, $lkpd_query), MYSQLI_ASSOC);
     ?>
 
-   <div class="section-2" style="background-color: #000; margin: 0; padding: 0; margin-bottom: 40px;">
+    <div class="section-2" style="background-color: #000; margin: 0; padding: 0; margin-bottom: 40px;">
         <h2 class="text-center" style="color:#b59a3b; margin: 0 0 20px 0; font-family: 'Poppins', sans-serif;">
             LEGALITAS
         </h2>
-        <div class="row" style="margin: 0; padding: 0;">
+        <!-- <div class="row" style="margin: 0; padding: 0;">
             <div class="column" style="margin: 0; padding: 0;">
                 <img src="images/Legalitas/potret1.jpg" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
             </div>
@@ -439,7 +440,60 @@
             <div class="column" style="margin: 0; padding: 0;">
                 <img src="images/Legalitas/potret2.jpg" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
             </div>
+        </div> -->
+
+        <?php
+        include "kon/koneksi.php";
+        $basePath = "images/Legalitas/";
+        $result = $conn->query("SELECT * FROM legalitas");
+
+
+        $portraitImages = [];
+        $landscapeImages = [];
+
+        while ($row = $result->fetch_assoc()) {
+            if ($row['image_type'] == 'portrait') {
+                $portraitImages[] = $row['image_name'];
+            } else {
+                $landscapeImages[] = $row['image_name'];
+            }
+        }
+        ?>
+
+        <div class="row" style="margin: 0; padding: 0;">
+            <?php
+            $totalPortrait = count($portraitImages);
+            $totalLandscape = count($landscapeImages);
+            $i = 0;
+            $j = 0;
+
+            while ($i < $totalPortrait || $j < $totalLandscape) {
+                if ($i < $totalPortrait) { ?>
+                    <div class="column" style="margin: 0; padding: 0;">
+                        <img src="<?php echo $basePath . $portraitImages[$i]; ?>" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
+                    </div>
+                <?php
+                    $i++;
+                }
+
+                if ($j < $totalLandscape) { ?>
+                    <div class="column" style="margin: 0; padding: 0;">
+                        <img src="<?php echo $basePath . $landscapeImages[$j]; ?>" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
+                        <?php
+                        if ($j + 1 < $totalLandscape) { ?>
+                            <img src="<?php echo $basePath . $landscapeImages[$j + 1]; ?>" class="fade-in-image" style="width: 100%; margin: 0; padding: 0;">
+                        <?php
+                            $j++;
+                        } ?>
+                    </div>
+            <?php
+                    $j++;
+                }
+            } ?>
         </div>
+
+
+
     </div>
 
     <script>
@@ -676,53 +730,53 @@
         <!-- end partner -->
         <footer>
             <div class="footer">
-            <div class="container">
-                <div class="row align-items-center row_footer">
-                <div class="col-md-3">
-                    <div class="map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.900066300759!2d113.84915147483633!3d-7.021031992980595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e70057ed749f%3A0x92004152aeafb8ed!2sHIGATRA%20PROPERTY!5e0!3m2!1sid!2sid!4v1726040814118!5m2!1sid!2sid"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
+                <div class="container">
+                    <div class="row align-items-center row_footer">
+                        <div class="col-md-3">
+                            <div class="map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.900066300759!2d113.84915147483633!3d-7.021031992980595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd9e70057ed749f%3A0x92004152aeafb8ed!2sHIGATRA%20PROPERTY!5e0!3m2!1sid!2sid!4v1726040814118!5m2!1sid!2sid"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-3 isi_footer" style="margin-top: 2%; text-align: justify;">
+                            <h5>Address</h5>
+                            <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
+                                Kec.
+                                Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
+                        </div>
+                        <div class="col-md-3 isi_footer" style="margin-bottom: 3%; text-align: justify;">
+                            <h5>Work hours</h5>
+                            <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
+                        </div>
+                        <div class="col-md-3 isi_footer" style="margin-bottom: 2%; text-align: justify;">
+                            <h5>Contact</h5>
+                            <p class="small"><i class="fas fa-envelope"></i> higatraapropertyy@gmail.com<br>
+                                <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-center social-icons">
+                            <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.instagram.com/higatra_property" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/username" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@HigatraProperty" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.tiktok.com/@higatraproperty" target="_blank">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3 isi_footer" style="margin-top: 2%; text-align: justify;">
-                    <h5>Address</h5>
-                    <p class="small"><i class="fas fa-map-marker-alt"></i> Jln. Jokotole No.7000, Dusun Toros, Babbalan,
-                    Kec.
-                    Batuan, Kabupaten Sumenep, Jawa Timur 69416</p>
-                </div>
-                <div class="col-md-3 isi_footer" style="margin-bottom: 3%; text-align: justify;">
-                    <h5>Work hours</h5>
-                    <p class="small"><i class="fas fa-clock"></i> Senin-Sabtu 08:00 - 16:00 WIB</p>
-                </div>
-                <div class="col-md-3 isi_footer" style="margin-bottom: 2%; text-align: justify;">
-                    <h5>Contact</h5>
-                    <p class="small"><i class="fas fa-envelope"></i> higatraapropertyy@gmail.com<br>
-                    <i class="fas fa-phone"></i> +62 877 - 2979 - 1118
-                    </p>
-                </div>
-                </div>
-                <div class="row">
-                <div class="col text-center social-icons">
-                    <a href="https://wa.me/6287849880465?text=Halo,%20saya%20tertarik%20dengan%20jasa%20Anda." target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="https://www.instagram.com/higatra_property" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/username" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@HigatraProperty" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                    </a>
-                    <a href="https://www.tiktok.com/@higatraproperty" target="_blank">
-                    <i class="fab fa-tiktok"></i>
-                    </a>
-                </div>
-                </div>
-            </div>
             </div>
         </footer>
         <?php include "layout/footer.html" ?>
