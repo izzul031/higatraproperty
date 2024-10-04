@@ -61,7 +61,9 @@
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="sidebar-heading d-flex justify-content-center">
-                <img src="../../images/logo.png" alt="Icon Usaha" width="80" class="img-fluid">
+                <a href="../welcome/">
+                    <img src="../../images/logo.png" alt="Icon Usaha" width="80" class="img-fluid">
+                </a>
             </div>
             <div class="list-group list-group-flush">
                 <!-- <a href="../karyawan/" class="list-group-item list-group-item-action bg-light">Karyawan</a>

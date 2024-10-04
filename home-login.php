@@ -40,7 +40,7 @@
             <img src="images/Group397.png" alt="Deskripsi gambar" width="250" height="auto" class="img-fluid mb-4" style="display: block; margin-left: auto; margin-right: auto; margin-bottom:50px;">
 
             <div class="form-outline mb-4 input-group">
-              <input type="email" id="form1Example13" class="form-control form-control-lg py-3" name="username" autocomplete="off" placeholder="E-mail" />
+              <input type="email" id="form1Example13" class="form-control form-control-lg py-3" name="username" placeholder="E-mail" />
             </div>
 
             <div class="form-outline mb-4 input-group">
@@ -68,7 +68,7 @@
               <a href="YOUR_GOOGLE_AUTH_URL" class="btn btn-danger btn-block btn-lg text-light my-2 py-3">Login dengan Google</a>
             </div> -->
 
-            
+
           </form>
 
         </div>
