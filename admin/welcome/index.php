@@ -11,7 +11,7 @@ $_SESSION['username'];
 
 <?php include "../layout/header-admin.php"; ?>
 <style>
-  .container {
+.container {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -20,9 +20,9 @@ $_SESSION['username'];
     padding: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-  }
+}
 
-  .container span {
+.container span {
     background-color: gold;
     color: white;
     padding: 15px;
@@ -32,13 +32,13 @@ $_SESSION['username'];
     font-weight: 600;
     letter-spacing: 5px;
     text-transform: uppercase;
-  }
+}
 
-  .container p {
+.container p {
     margin: 20px;
-  }
+}
 
-  .container .btn {
+.container .btn {
     margin-top: -30px;
     width: 150px;
     background-color: gold;
@@ -47,26 +47,33 @@ $_SESSION['username'];
     letter-spacing: 5px;
     text-transform: uppercase;
     border-radius: 20px;
-  }
+}
 
-  .container .btn:hover {
+.container .btn:hover {
     margin-top: -30px;
     width: 200px;
     background-color: darkorange;
     font-weight: 500;
     transition: 1s;
     color: white;
-  }
+}
 </style>
 
 
 
 <div class="container">
-  <h3>Welcome, <span><?= $_SESSION['name']; ?></span></h3>
-  <p>Your Email id is :
-  <h6><?= $_SESSION['username']; ?></h6>
-  </p>
-  <a href="logout.php" class="btn">LOGOUT</a>
+    <h3>Welcome, <span><?= $_SESSION['name']; ?></span></h3>
+    <p>Your Email id is :
+    <h6><?= $_SESSION['username']; ?></h6>
+    </p>
+    <a href="logout.php" class="btn">LOGOUT</a>
+</div>
+
+
+<!-- Registration Link -->
+<div class="d-flex justify-content-center mt-3">
+    <p>Don't have an account? <a href="register.php" class="text-decoration-none" style="color: inherit;">Register</a>
+    </p>
 </div>
 
 
