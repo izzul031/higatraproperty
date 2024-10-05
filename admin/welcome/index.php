@@ -1,15 +1,18 @@
 <?php
 session_start();
-include_once('../../db_connection.php');
 
-// if(isset($_SESSION['name']) && isset($_SESSION['username'] )){
+// Periksa apakah sesi name dan username ada, jika tidak arahkan ke halaman login
+if (!isset($_SESSION['name']) || !isset($_SESSION['username'])) {
+  header("Location: ../../home-login.php");
+  exit();
+}
 
-// }
 $_SESSION['name'];
 $_SESSION['username'];
 ?>
 
 <?php include "../layout/header-admin.php"; ?>
+
 <style>
   .container {
     min-height: 100vh;
@@ -19,7 +22,6 @@ $_SESSION['username'];
     flex-direction: column;
     padding: 15px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
   }
 
   .container span {
@@ -59,20 +61,16 @@ $_SESSION['username'];
   }
 </style>
 
-
-
 <div class="container">
-  <h3>Welcome, <span><?= $_SESSION['name']; ?></span></h3>
+  <h3>Welcome, <span><?= htmlspecialchars($_SESSION['name']); ?></span></h3>
   <p>Your Email id is :
-  <h6><?= $_SESSION['username']; ?></h6>
+  <h6><?= htmlspecialchars($_SESSION['username']); ?></h6>
   </p>
-  <a href="logout.php" class="btn">LOGOUT</a>
+
+  <!-- Logout button menggunakan form POST untuk mencegah CSRF -->
+  <form method="POST" action="logout.php">
+    <button type="submit" class="btn">LOGOUT</button>
+  </form>
 </div>
 
-
-
-
-<!-- Bootstrap JavaScript Libraries -->
-
-<?php include "../layout/footer-admin.php";
-?>
+<?php include "../layout/footer-admin.php"; ?>
