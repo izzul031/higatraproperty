@@ -1,6 +1,6 @@
 RewriteEngine On
 
-# Untuk menghilangkan ekstensi .php
+# Menghilangkan ekstensi .php dari URL
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.php -f
-RewriteRule ^(.*)$ $1.php [L]
+RewriteRule ^(.*)$ $1.php [L,QSA]
