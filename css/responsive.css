@@ -96,6 +96,28 @@
     .wrapper {
         width: 70%;
     }
+                                                                 .hero {
+                                                                     height: auto;
+                                                                 }
+                                
+                                                                 .hero .carousel-item {
+                                                                     height: auto;
+                                                                 }
+                                
+                                                                 .hero .carousel-item img {
+                                                                     width: 100%;
+                                                                     height: auto;
+                                                                     object-fit: cover;
+                                                                 }
+                                
+                                                                 .hero .hero-overlay {
+                                                                     height: 100%;
+                                                                 }
+                                
+                                                                 .c_prev,
+                                                                 .c_next {
+                                                                     display: none;
+                                                                 }
 }
 
 
@@ -138,8 +160,28 @@
         width: 100%;
         margin-bottom: 20px;
     }
+  .hero {
+      height: auto;
+  }
 
+  .hero .carousel-item {
+      height: auto;
+  }
 
+  .hero .carousel-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+  }
+
+  .hero .hero-overlay {
+      height: 100%;
+  }
+
+  .c_prev,
+  .c_next {
+      display: none;
+  }
 }
 
 @media (max-width: 480px) {}
