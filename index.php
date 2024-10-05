@@ -67,10 +67,6 @@
           <img src="images/sampul/7.png" alt="Background Image 3">
           <div class="hero-overlay"></div>
         </div>
-        <div class="carousel-item">
-          <img src="images/sampul/8.png" alt="Background Image 3">
-          <div class="hero-overlay"></div>
-        </div>
       </div>
     </div>
   </section>
