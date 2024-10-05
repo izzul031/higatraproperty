@@ -23,8 +23,6 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
 
 </head>
 
@@ -66,19 +64,6 @@
 
     <head>
         <style>
-        .gallery-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            /* Center the images */
-        }
-
-        /* .card {
-                flex-basis: calc(10.333% - 20px);
-                margin: 10px;
-                box-sizing: border-box;
-            } */
-
         body {
             background-color: #f4f4f4;
             margin: 0;
@@ -102,12 +87,9 @@
         }
 
         .card {
-            flex-basis: calc(10.333% - 20px);
-
             display: inline-block;
-            width: 330px;
-            height: 250px;
-            margin: 1%;
+            width: 310px;
+            margin: 400px;
             background-color: #333;
             border-radius: 10px;
             overflow: hidden;
@@ -136,11 +118,11 @@
         }
 
         .card img {
-            /* position: inline-block; */
+            /* position: relative; */
             width: 400px;
-            height: 250px;
+            height: 300px;
             display: flex;
-            justify-self: center;
+            justify-content: center;
             align-items: center;
             /* aspect-ratio: 16 / 9; */
             object-fit: cover;
@@ -248,7 +230,7 @@
         .modal-content {
             display: block;
             margin: auto;
-            max-width: 70%;
+            max-width: 50%;
             max-height: 100%;
         }
 
@@ -259,48 +241,6 @@
             color: white;
             font-size: 40px;
             font-weight: bold;
-        }
-
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 40px;
-            user-select: none;
-            -webkit-user-select: none;
-        }
-
-        .prev {
-            left: 0;
-        }
-
-        .next {
-            right: 0;
-        }
-
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        @media (max-width: 768px) {
-            .card {
-                flex-basis: calc(50% - 20px);
-                /* 2 cards per row on smaller screens */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .card {
-                flex-basis: calc(100% - 20px);
-                /* 1 card per row on very small screens */
-            }
         }
 
         .footer .social-icons i {
@@ -314,35 +254,6 @@
             margin: 0 10px;
             color: #ffffff;
             text-decoration: none;
-        }
-
-        .gallery-wrapper .card {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-
-        .gallery-wrapper .card.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Gaya awal untuk card */
-        .card {
-            opacity: 0;
-            /* Tidak terlihat pada awalnya */
-            transform: translateY(20px);
-            /* Bergeser ke bawah */
-            transition: opacity 0.6s ease, transform 0.6s ease;
-            /* Transisi saat muncul */
-        }
-
-        /* Gaya untuk card saat terlihat */
-        .card.show {
-            opacity: 1;
-            /* Menjadi terlihat */
-            transform: translateY(0);
-            /* Kembali ke posisi normal */
         }
         </style>
     </head>
@@ -388,86 +299,6 @@
         }
 
         // Close modal when clicking outside of the modal content
-        modal.onclick = function(event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        }
-        </script>
-
-
-
-
-        <div class="modal" id="myModal">
-            <span class="close" id="closeModal">&times;</span>
-            <img class="modal-content" id="img01" />
-            <a class="prev" id="prevSlide">&#10094;</a>
-            <a class="next" id="nextSlide">&#10095;</a>
-        </div>
-
-        <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const cards = document.querySelectorAll('.card');
-
-            // Membuat observer
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('show'); // Tambahkan kelas show
-                    }
-                });
-            }, {
-                threshold: 0.1
-            }); // Mulai animasi ketika 10% elemen terlihat
-
-            // Menerapkan observer ke setiap card
-            cards.forEach(card => {
-                observer.observe(card);
-            });
-        });
-        </script>
-
-
-
-
-        <script>
-        var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("img01");
-        var closeModal = document.getElementById("closeModal");
-        var prevSlide = document.getElementById("prevSlide");
-        var nextSlide = document.getElementById("nextSlide");
-
-        var groupedImages = <?= json_encode($grouped_images) ?>;
-        var currentClient = '';
-        var currentIndex = 0;
-
-        document.querySelectorAll('.card img').forEach(img => {
-            img.onclick = function() {
-                currentClient = this.getAttribute('data-client');
-                currentIndex = 0;
-                openModal(currentClient, currentIndex);
-            }
-        });
-
-        closeModal.onclick = function() {
-            modal.style.display = "none";
-        }
-
-        prevSlide.onclick = function() {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : groupedImages[currentClient].length - 1;
-            openModal(currentClient, currentIndex);
-        }
-
-        nextSlide.onclick = function() {
-            currentIndex = (currentIndex < groupedImages[currentClient].length - 1) ? currentIndex + 1 : 0;
-            openModal(currentClient, currentIndex);
-        }
-
-        function openModal(client, index) {
-            modal.style.display = "block";
-            modalImg.src = "images/gambar_3d/" + groupedImages[client][index].gambar;
-        }
-
         modal.onclick = function(event) {
             if (event.target === modal) {
                 modal.style.display = "none";
