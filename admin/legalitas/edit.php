@@ -12,13 +12,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Cek jika ada gambar baru yang di-upload
     if (isset($_FILES['image_file']) && $_FILES['image_file']['error'] == UPLOAD_ERR_OK) {
-        $targetDirectory = "images/Legalitas/";
+        $targetDirectory = "../../images/Legalitas/";
         $imageFileName = basename($_FILES['image_file']['name']);
         $targetFilePath = $targetDirectory . $imageFileName;
 
         // Pindahkan file yang di-upload ke folder tujuan
         if (move_uploaded_file($_FILES['image_file']['tmp_name'], $targetFilePath)) {
             $imagePath = $targetFilePath; // Update dengan path gambar baru
+            header("Location: index.php");
         } else {
             echo "Gagal meng-upload gambar.";
         }
