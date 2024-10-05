@@ -69,6 +69,7 @@
 .c_next {
     display: none;
 }
+
 }
 
 @media (max-width: 768px) {
@@ -140,6 +141,21 @@
                                                                  .c_next {
                                                                      display: none;
                                                                  }
+                                                                                                                                        .row-legalitas .column img {
+                                                                                                                                            width: 100%;
+                                                                                                                                            /* Membuat gambar full width */
+                                                                                                                                            margin: 0;
+                                                                                                                                            /* Menghilangkan margin */
+                                                                                                                                            padding: 0;
+                                                                                                                                            /* Menghilangkan padding */
+                                                                                                                                        }
+                                                                    
+                                                                                                                                        .row-legalitas .column {
+                                                                                                                                            margin: 0;
+                                                                                                                                            /* Menghilangkan margin dari div column */
+                                                                                                                                            padding: 0;
+                                                                                                                                            /* Menghilangkan padding dari div column */
+                                                                                                                                        }
 }
 
 
