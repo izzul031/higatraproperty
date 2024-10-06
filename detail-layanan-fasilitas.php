@@ -23,7 +23,7 @@ if (!$service) {
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta name="author" content="" />
-<title>Detail Layanan Renovasi</title>
+<title>Detail Layanan Fasilitas dan Majemen Perumahan</title>
 <link rel="icon" href="images/logo.png" type="image/x-icon">
 
 
@@ -49,14 +49,15 @@ if (!$service) {
     <section class="us_section2 layout_padding">
         <div class="container tabel_harga">
             <div class="heading_container navy2 mb-4">
-                <h2>Jasa Renovasi</h2>
+                <h2>Fasilitas dan Majemen Perumahan</h2>
             </div>
             <div class="service-details mb-5">
-                <h1 class="mb-3"></h1>
-                <p>Layanan renovasi kami meliputi perbaikan dan perombakan bangunan untuk memenuhi perubahan gaya hidup, kebutuhan ruang, dan estetika terkini.</p>
+                <div class="row justify-content-center">
+                    <p>Mengelola perumahan dan fasilitas secara profesional untuk menjaga kenyamanan dan keamanan lingkungan.</p>
+                </div>
             </div>
             <div class="heading_container navy2 mb-5">
-                <h2>TABEL HARGA JASA RENOVASI</h2>
+                <h2>TABEL HARGA JASA FASILITAS DAN MANAJEMEN</h2>
             </div>
 
             <div class="us_container ">
