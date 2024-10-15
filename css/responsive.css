@@ -222,9 +222,15 @@
   }
 }
 
-@media (max-width: 480px) {}
+@media (max-width: 480px) {
+    .row .img_layanan {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
 
 @media (max-width: 420px) {
+
     .slider_section .detail-box h1 {
         letter-spacing: .3rem;
     }
